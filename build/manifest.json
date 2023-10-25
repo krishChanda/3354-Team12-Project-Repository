@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Reviewify Chrome Extention",
+  "description": "Reviewify Chrome Extention - Help sort through Amazon Reviews",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open"
+  },
+  "permissions": [
+    "scripting"
+  ]
+}
