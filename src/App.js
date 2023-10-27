@@ -6,8 +6,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header Main-bg">
+        <div className="App-header-div">
+          <h1 className="App-header-title">
+            <span>Welcome to </span>
+            <span>Reviewify</span>
+          </h1>
+        </div>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Welcome to Reviewify!</p>
         <a
           className="Link-color"
           href="https://reactjs.org"
