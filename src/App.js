@@ -5,7 +5,7 @@ import "./globals.css";
 function App() {
   return (
     <div className="App">
-      <header className="App-header Main-bg">
+      {/* <header className="App-header Main-bg">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Welcome to Reviewify!</p>
         <a
@@ -16,7 +16,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
