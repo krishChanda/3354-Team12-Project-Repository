@@ -8,7 +8,8 @@ function App() {
     <div className="App">
       <header className="App-header Main-bg">
         <div className="App-header-div">
-          <CreateAccount />
+          {/*renders create account section for testing
+           <CreateAccount /> */} 
           <h1 className="App-header-title">
             <span>Welcome to </span>
             <span>Reviewify</span>
