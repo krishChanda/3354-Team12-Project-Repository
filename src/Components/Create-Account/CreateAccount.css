@@ -1,0 +1,15 @@
+.Create-Accout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    height: 100vh;
+}
+
+.Create-Accout-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
