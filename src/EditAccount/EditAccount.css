@@ -1,0 +1,25 @@
+.Profile {
+    width: 300px;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.Image {
+    height: 100%;
+    width: 50%;
+}
+
+.Form {
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+}
+
+.Text {
+    margin-bottom: 2%;
+}
