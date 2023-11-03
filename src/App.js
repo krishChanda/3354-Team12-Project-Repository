@@ -1,8 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "./globals.css";
-import CreateAccount from "./Components/Create-Account/CreateAccount";
-
+//import CreateAccount from "./Components/Create-Account/CreateAccount";
+import ViewAccount from "./ViewAccount/ViewAccount";
 function App() {
   return (
     <div className="App">

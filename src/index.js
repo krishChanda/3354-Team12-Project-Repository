@@ -4,12 +4,13 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Navbar from "./Components/Shared-Components/Navbar";
+import ViewAccount from "./ViewAccount/ViewAccount";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
         <Navbar />
-        <App />
+        <ViewAccount />
     </React.StrictMode>
 );
 
