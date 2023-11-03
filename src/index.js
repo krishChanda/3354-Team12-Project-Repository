@@ -4,11 +4,12 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Navbar from "./Components/Shared-Components/Navbar";
-import CreateAccount from "./Components/Create-Account/CreateAccount";
 import fbconfig from "./Context/fbconfig"; // User authentication API Key
 import { initializeApp} from "firebase/app"; // Firebase import
+import { getFirestore } from "firebase/firestore";
 
-const app = initializeApp(fbconfig);
+const app = initializeApp(fbconfig); //User Authentication API Call
+export const db = getFirestore(app); //Database API Call
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

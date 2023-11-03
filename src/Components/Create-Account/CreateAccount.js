@@ -7,12 +7,18 @@ import "./CreateAccount.css";
 import { useState } from "react"; // useState --> keeps track of user status (logged in or not logged in)
 import {getAuth, createUserWithEmailAndPassword} from "firebase/auth"; // import authentication function
 import { useNavigate } from "react-router-dom";
+import { useAddUser } from "../../Hooks/useAddUser";
 
 const CreateAccount = () => {
-    // variable declerations
+    //Define Add To Database Function 
+    const {addUser} = useAddUser();
+
+    // user data variable declerations
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [firstname, setFirstName] = useState("");
+    const [lastname, setLastName] = useState("");
 
     // Create User into Firebase Database
     const auth = getAuth()
@@ -21,20 +27,29 @@ const CreateAccount = () => {
         e.preventDefault();
         if (password === confirmPassword){
             createUserWithEmailAndPassword(auth, email, password)
-            .then((user) => {
-                // navigate to home page
-                navigate("/home");
+            .then(async (userCredential) => {
+                const user = userCredential.user;
+                if (user) {
+                    const userID = user.uid;
+                    navigate("/home");
+                    addUser({ userID, firstname, lastname, email });
+                }     
+                else {
+                    alert("Error: User not authenticated.");
+                }
             })
             .catch((error) => {
                 alert(error);
-            })
+            });
         }
         else{
-            alert("Error, confirm password does not match password")
+            alert("Error, confirm password does not match password");
         }
 
         
     }
+    
+    
 
     return (
         <div className="Create-Account">
@@ -49,6 +64,20 @@ const CreateAccount = () => {
                 placeholder="EMAIL"
             />
             <FormTextBox 
+                onChange={(e) => setFirstName(e)}
+                type="firstname"
+                name="firstname"
+                icon={email_icon}
+                placeholder="FIRST NAME"
+            />
+            <FormTextBox 
+                onChange={(e) => setLastName(e)}
+                type="lastname"
+                name="lastname"
+                icon={email_icon}
+                placeholder="LASTNAME"
+            />
+            <FormTextBox 
                 onChange={(e) => setPassword(e)}
                 type="password"
                 name="password"
@@ -56,7 +85,7 @@ const CreateAccount = () => {
                 placeholder="PASSWORD"
             />
             <FormTextBox
-            onChange={(e) => setConfirmPassword(e)}
+                onChange={(e) => setConfirmPassword(e)}
                 type="password"
                 name="confirm password"
                 icon={password_icon}

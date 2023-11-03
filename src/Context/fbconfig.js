@@ -8,3 +8,4 @@ export default {
     messagingSenderId: "141838355189",
     appId: "1:141838355189:web:72ef69f81200ae9366d3bc"
 };
+
