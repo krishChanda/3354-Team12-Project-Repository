@@ -1,7 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "./globals.css";
-import CreateAccount from "./Components/Create-Account/CreateAccount";
+import CreateAccount from "./Components/Create-Account/CreateAccount";  
+import EditAccount from "./EditAccount/EditAccount";
 
 function App() {
   return (
