@@ -1,17 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "./globals.css";
-//import Login from "./Login"
-import Login from "./Login/Login";
-
+//import CreateAccount from "./Components/Create-Account/CreateAccount";
+import ViewAccount from "./ViewAccount/ViewAccount";
 function App() {
   return (
     <div className="App">
       <header className="App-header Main-bg">
         <div className="App-header-div">
-          <div>
-            <Login />
-          </div>
+          {/*renders create account section for testing
+           <CreateAccount /> */} 
           <h1 className="App-header-title">
             <span>Welcome to </span>
             <span>Reviewify</span>
