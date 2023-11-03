@@ -1,12 +1,17 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "./globals.css";
+//import Login from "./Login"
+import Login from "./Login/Login";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header Main-bg">
         <div className="App-header-div">
+          <div>
+            <Login />
+          </div>
           <h1 className="App-header-title">
             <span>Welcome to </span>
             <span>Reviewify</span>
