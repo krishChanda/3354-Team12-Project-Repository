@@ -4,13 +4,18 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Navbar from "./Components/Shared-Components/Navbar";
-import ViewAccount from "./ViewAccount/ViewAccount";
+import fbconfig from "./Context/fbconfig"; // User authentication API Key
+import { initializeApp} from "firebase/app"; // Firebase import
+import { getFirestore } from "firebase/firestore";
+
+const app = initializeApp(fbconfig); //User Authentication API Call
+export const db = getFirestore(app); //Database API Call --> sets connection to the cloud firestore
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
         <Navbar />
-        <ViewAccount />
+        <App />
     </React.StrictMode>
 );
 
