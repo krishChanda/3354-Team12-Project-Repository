@@ -9,7 +9,7 @@ import { initializeApp} from "firebase/app"; // Firebase import
 import { getFirestore } from "firebase/firestore";
 
 const app = initializeApp(fbconfig); //User Authentication API Call
-export const db = getFirestore(app); //Database API Call
+export const db = getFirestore(app); //Database API Call --> sets connection to the cloud firestore
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

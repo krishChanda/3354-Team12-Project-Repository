@@ -1,3 +1,6 @@
+//Create Account page
+
+// react and firebase imports
 import React from "react";
 import FormTextBox from "../Shared-Components/FormTextBox";
 import email_icon from "../../../public/icons/email_icon.svg";
@@ -6,11 +9,11 @@ import "./CreateAccount.css";
 
 import { useState } from "react"; // useState --> keeps track of user status (logged in or not logged in)
 import {getAuth, createUserWithEmailAndPassword} from "firebase/auth"; // import authentication function
-import { useNavigate } from "react-router-dom";
-import { useAddUser } from "../../Hooks/useAddUser";
+import { useNavigate } from "react-router-dom"; // navigation import
+import { useAddUser } from "../../Hooks/useAddUser"; // adduser function database import
 
 const CreateAccount = () => {
-    //Define Add To Database Function 
+    //Define AddUser to Database Function 
     const {addUser} = useAddUser();
 
     // user data variable declerations
@@ -22,35 +25,42 @@ const CreateAccount = () => {
 
     // Create User into Firebase Database
     const auth = getAuth()
-    const navigate = useNavigate();
+    const navigate = useNavigate(); // define nagivation function
+
+    // when "create account button is clicked"
     async function handleSignUp(e){
         e.preventDefault();
+        // checks if password and confirm password match
         if (password === confirmPassword){
+            // API Call for creating a new user
             createUserWithEmailAndPassword(auth, email, password)
-            .then(async (userCredential) => {
+            .then(async (userCredential) => { // then after creating user --> add user info to database
                 const user = userCredential.user;
+                // gets the current userID
                 if (user) {
                     const userID = user.uid;
+                    // go to home page
                     navigate("/home");
+                    // add user Info to database
                     addUser({ userID, firstname, lastname, email });
-                }     
+                }  
+                // else there is an authentication error   
                 else {
                     alert("Error: User not authenticated.");
                 }
             })
+            // else there is an error in creating the account
             .catch((error) => {
-                alert(error);
+                alert(error); // API call handels the error exception in this case
             });
         }
+        // else return an error
         else{
             alert("Error, confirm password does not match password");
         }
-
         
     }
     
-    
-
     return (
         <div className="Create-Account">
             <h2 className="Create-Account-title">

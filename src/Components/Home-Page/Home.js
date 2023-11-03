@@ -4,6 +4,7 @@ import "../../../src/globals.css";
 import { useGetUser } from "../../Hooks/useGetUser";
 
 function Home() {
+  // defining getUser info function
   const {userInfo} = useGetUser();
   return (
     <div className="Home">

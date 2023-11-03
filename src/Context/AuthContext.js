@@ -1,14 +1,22 @@
-// JS File that checks the state of the user and makes sures that users who are not logged in do not have access to any pages
+// JS File that checks the state of the user --> (signed in or not)
+
+//react and firebase imports
 import { createContext, useState, useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
+// Function that exports context state of user
 export const Context = createContext();
 
+// Function that calls firebase auth to check if valid user is signed in
 export function AuthContext({children}){
+    // firebase auth decleration
     const auth = getAuth();
+
+    // variable declarations for user state
     const [user, setUser] = useState();
     const [loading, setLoading] = useState(true);
 
+    // function that checks if a valid user is signed in
     useEffect(() => {
         let unsubscribe;
         unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -25,6 +33,7 @@ export function AuthContext({children}){
         setUser: setUser
     }
 
+    // return the user state to the function call
     return <Context.Provider value={values}>
         {!loading &&
             children
