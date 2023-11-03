@@ -29,7 +29,6 @@ const EditAccount = () => {
         <div className='SaveButton'>
             <button className='Button'>Save Profile</button>
         </div>
-
     </div>
   )
 }
