@@ -1,11 +1,11 @@
 import logo from "../../../src/logo.svg";
 import "./Home.css";
 import "../../../src/globals.css";
-import { useGetUser } from "../../Hooks/useGetUser";
+import { Link } from "react-router-dom"; // navigation import
+
+// DELETE link to view account after navbar nagivation is fixed
 
 function Home() {
-  // defining getUser info function
-  const {userInfo} = useGetUser();
   return (
     <div className="Home">
       <header className="Home-header Main-bg">
@@ -24,22 +24,7 @@ function Home() {
         >
           Create Your Sentiment Score
         </a>
-        <ul>
-          {userInfo.length > 0 ? (
-            userInfo.map((user) => {
-              const { email, firstname, lastname } = user;
-              return (
-                <li key={user.id}>
-                  <h4>Email: {email}</h4>
-                  <h4>First Name: {firstname}</h4>
-                  <h4>Last Name: {lastname}</h4>
-                </li>
-              );
-            })
-          ) : (
-            <li>No user data available</li>
-          )}
-        </ul>
+        <span><Link to="/viewaccount">View Account</Link></span>
       </header>
     </div>
   );

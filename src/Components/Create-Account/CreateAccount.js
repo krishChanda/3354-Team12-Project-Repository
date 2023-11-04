@@ -9,7 +9,7 @@ import "./CreateAccount.css";
 
 import { useState } from "react"; // useState --> keeps track of user status (logged in or not logged in)
 import {getAuth, createUserWithEmailAndPassword} from "firebase/auth"; // import authentication function
-import { useNavigate } from "react-router-dom"; // navigation import
+import { useNavigate, Link } from "react-router-dom"; // navigation import
 import { useAddUser } from "../../Hooks/useAddUser"; // adduser function database import
 
 const CreateAccount = () => {
@@ -23,8 +23,8 @@ const CreateAccount = () => {
     const [firstname, setFirstName] = useState("");
     const [lastname, setLastName] = useState("");
 
-    // Create User into Firebase Database
-    const auth = getAuth()
+    
+    const auth = getAuth() // Create User into Firebase Database
     const navigate = useNavigate(); // define nagivation function
 
     // when "create account button is clicked"
@@ -101,9 +101,13 @@ const CreateAccount = () => {
                 icon={password_icon}
                 placeholder="CONFIRM PASSWORD"
             />
-            <button onClick={(e) => {handleSignUp(e)}}>
-                Sign Up 
-            </button>
+            <span>
+                <button className="Create-Account-button" onClick={(e) => {handleSignUp(e)}}>
+                    Sign Up 
+                </button>
+            </span>
+            <span className="Create-Account-ptext"> Returning User? </span>
+            <span className="Create-Account-signin-text"> <Link to="/"> Login in</Link> </span>
         </div>
     );
 };

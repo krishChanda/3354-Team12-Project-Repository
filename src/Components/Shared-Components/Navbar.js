@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../logo.svg";
 import blank_profile from "/public/Blank_Profile.svg";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {

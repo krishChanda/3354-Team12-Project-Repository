@@ -7,6 +7,8 @@ import Navbar from "./Components/Shared-Components/Navbar";
 import fbconfig from "./Context/fbconfig"; // User authentication API Key
 import { initializeApp} from "firebase/app"; // Firebase import
 import { getFirestore } from "firebase/firestore";
+import Login from "./Components/Login/Login";
+import ViewAccount from "./Components/ViewAccount/ViewAccount";
 
 const app = initializeApp(fbconfig); //User Authentication API Call
 export const db = getFirestore(app); //Database API Call --> sets connection to the cloud firestore
@@ -14,7 +16,7 @@ export const db = getFirestore(app); //Database API Call --> sets connection to 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <Navbar />
+        <Navbar/>
         <App />
     </React.StrictMode>
 );

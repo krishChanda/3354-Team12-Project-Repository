@@ -1,8 +1,9 @@
 import React from "react";
 import "./ViewAccount.css";
-
+import { useGetUser } from "../../Hooks/useGetUser";
 
 function ViewAccount(){
+  const {userInfo} = useGetUser();
   return(
     <div className="app-container">
 
@@ -28,14 +29,22 @@ function ViewAccount(){
     </div>
     <div className="white-box">
         <div className="input-container">
-          
-          <p className="input-label"> Username</p>
-          <br></br>
-          <br></br>
-          <p className="input-label">Email</p>
-          <br></br>
-          <br></br>
-          <p className="input-label">Password</p>
+        <ul>
+          {userInfo.length > 0 ? (
+            userInfo.map((user) => {
+              const { email, firstname, lastname } = user;
+              return (
+                <li key={user.id}>
+                  <h4>Email: {email}</h4>
+                  <h4>First Name: {firstname}</h4>
+                  <h4>Last Name: {lastname}</h4>
+                </li>
+              );
+            })
+          ) : (
+            <li>Loading</li>
+          )}
+        </ul>
         </div>
       </div>
       <br></br>
