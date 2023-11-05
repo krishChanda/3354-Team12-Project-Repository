@@ -6,6 +6,7 @@ import CreateAccount from "./Components/Create-Account/CreateAccount"; // create
 import Home from "./Components/Home-Page/Home"; // home page import
 import Login from "./Components/Login/Login"; // login page import
 import ViewAccount from "./Components/ViewAccount/ViewAccount"; // view account import
+import EditAccount from "./Components/Edit-Account/EditAccount";
 
 import { AuthContext } from "./Context/AuthContext"; // Webpage security import
 import { Protected } from "./Context/Protected"; // Protects pages from non-users
@@ -30,6 +31,10 @@ function App() {
     {
       path:"/viewaccount",
       element:<Protected><ViewAccount/></Protected>
+    },
+    {
+      path:"editaccount",
+      element:<Protected><EditAccount/></Protected>
     }
 
   ])

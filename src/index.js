@@ -9,6 +9,7 @@ import { initializeApp} from "firebase/app"; // Firebase import
 import { getFirestore } from "firebase/firestore";
 import Login from "./Components/Login/Login";
 import ViewAccount from "./Components/ViewAccount/ViewAccount";
+import EditAccount from "./Components/Edit-Account/EditAccount";
 
 const app = initializeApp(fbconfig); //User Authentication API Call
 export const db = getFirestore(app); //Database API Call --> sets connection to the cloud firestore

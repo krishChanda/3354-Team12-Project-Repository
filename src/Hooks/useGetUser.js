@@ -76,7 +76,7 @@ export const useGetUser = () => {
     // defines that function should run 2 seconds after being called to ensure and updates in the database are done before function call
     useEffect(() => {
         // Introduce a 2-3 second delay before calling getUser
-        const delay = 2000; // 2 seconds
+        const delay = 500; // 2 seconds
         const timer = setTimeout(() => {
             getUser();
         }, delay);

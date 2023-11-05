@@ -1,9 +1,20 @@
 import React from "react";
 import "./ViewAccount.css";
 import { useGetUser } from "../../Hooks/useGetUser";
+import { useNavigate } from "react-router-dom"; // navigation import
 
 function ViewAccount(){
   const {userInfo} = useGetUser();
+  const navigate = useNavigate();
+
+  const handleEditProfile = () => {
+    navigate('/editaccount');
+  };
+  const handleHome = () => {
+    navigate('/home');
+  };
+  
+
   return(
     <div className="app-container">
 
@@ -61,7 +72,11 @@ function ViewAccount(){
     
     <div className="edit-profile">
       <div className="container">
-      <button className="edit-button">Edit Profile</button>
+        <button className="edit-button" onClick={handleEditProfile}>Edit Profile</button>
+      
+      </div>
+      <div className="container">
+        <button className="edit-button" onClick={handleHome}> Home </button>
       </div>
       
     </div>

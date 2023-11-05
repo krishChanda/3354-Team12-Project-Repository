@@ -450,6 +450,84 @@ font-family: 'Lato' , sans-serif;
 
 
 
+.Body {
+    background-color: #E8EFFF;
+    height: 650px
+}
+
+.Profile {
+    width: 300px;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+.Image {
+    height: 100%;
+    width: 50%;
+}
+
+.Form {
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+}
+
+.Text {
+    margin-bottom: 2%;
+}
+
+.ChangeProfile {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.SaveButton {
+    margin: auto;
+    width: 80%;
+    height: 30%;
+    justify-items: center;
+    margin-top: 13%;
+}
+
+.Button {
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    border-color: #afa9d9;
+    border-radius: 25px;
+    background: #90A0F6;
+    box-shadow: 0px 4px 6px 0px rgba(62, 62, 62, 0.25);
+    color: white;
+    outline: none;
+    border-width: 0;
+}
+
+.Button:hover {
+    background: #615b86;
+    cursor: pointer;
+}
+
+.Button:active {
+    background: #818bc8;
+    cursor: pointer;
+}
+
+.ChangeImage {
+    font-size: medium;
+    color: rgb(164, 170, 234);
+}
+
+.ChangeImage:hover {
+    color: rgb(89, 93, 136);
+    cursor: pointer;
+}
 .Navbar {
   text-align: center;
 }
