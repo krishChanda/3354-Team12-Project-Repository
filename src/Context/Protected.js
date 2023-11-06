@@ -1,3 +1,5 @@
+// Author: Krish Chanda
+
 // .js File that protects all pages except login from non-users 
 // for example: this function tag will ensure a user who does not have an account can't access the view account page
 

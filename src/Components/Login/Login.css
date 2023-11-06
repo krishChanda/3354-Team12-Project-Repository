@@ -1,3 +1,5 @@
+/* Author: Saipravallika Akula */
+
 .Login {
     text-align: center;
     background-color: #E8EFFF;
@@ -6,7 +8,7 @@
 }
 
 .Login-logo {
-    margin-top: 200px;
+    margin-top: 200px; 
 }
 
 .Login-title {

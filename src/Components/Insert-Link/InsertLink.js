@@ -1,3 +1,7 @@
+// Author: Daniel Ng
+// Test Case 13: System should be able to validate different product links
+// Test Case 14: System should allow the user to insert different Amazon product links
+
 // InsertLink.js
 import React from "react";
 import "./InsertLink.css";

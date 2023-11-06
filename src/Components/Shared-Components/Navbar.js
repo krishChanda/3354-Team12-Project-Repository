@@ -1,3 +1,6 @@
+// Author: Hayden Bell
+
+
 import React from "react";
 import logo from "../../logo.svg";
 import blank_profile from "/public/Blank_Profile.svg";
@@ -10,6 +13,7 @@ const Navbar = () => {
             <nav className="Navbar-header">
                 <div className="Navbar-logo">
                     <a href="/" rel="noreferrer">
+                        {/* Adds the logo and styles it */}
                         <img
                             src={logo}
                             alt="logo"
@@ -25,6 +29,7 @@ const Navbar = () => {
                 </div>
                 <div className="Navbar-profile">
                     <a href="/" rel="noreferrer">
+                        {/* Adds the profile icon in the top right */}
                         <img
                             src={blank_profile}
                             alt="blank_profile"

@@ -1,8 +1,12 @@
+// Author: Khaled Elkhaled
+// Test Case 9: The user should be able to view their Account
+
 import React from "react";
 import "./ViewAccount.css";
 import { useGetUser } from "../../Hooks/useGetUser";
 import { useNavigate } from "react-router-dom"; // navigation import
 
+// sets up navigation to the Edit Account and Home pages
 function ViewAccount(){
   const {userInfo} = useGetUser();
   const navigate = useNavigate();
@@ -38,6 +42,8 @@ function ViewAccount(){
     <br></br>
     
     </div>
+
+    {/* Displays the email, first name, and last name of the registered user */}
     <div className="white-box">
         <div className="input-container">
         <ul>
@@ -70,6 +76,7 @@ function ViewAccount(){
       <br></br>
       <br></br>
     
+    {/* Buttons which allow the user to navigate through the pages */}
     <div className="edit-profile">
       <div className="container">
         <button className="edit-button" onClick={handleEditProfile}>Edit Profile</button>

@@ -1,3 +1,7 @@
+// Author: Brandon Plant
+// Test Case 6: The system should make an API call to db
+
+
 // File that contains an addUser Function --> when user creates account, this function call stores info (first/last name/email/userID) to database
 
 // react and firebase imports

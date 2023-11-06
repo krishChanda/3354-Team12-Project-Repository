@@ -1,3 +1,7 @@
+// Author: Krish Chanda
+// Test Case 7: The system should make an API call for user Authentication 
+// Test Case 8: The system should make an API call for Account Creation
+
 // JS File that checks the state of the user --> (signed in or not)
 
 //react and firebase imports

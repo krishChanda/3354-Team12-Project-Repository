@@ -1,3 +1,5 @@
+// Author: Brandon Plant
+
 // JS file that has function which updates the database when user wants to change first name or last name
 
 import { collection, query, where, updateDoc, getDocs } from "firebase/firestore";

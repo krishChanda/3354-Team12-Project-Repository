@@ -1,3 +1,7 @@
+// Author: Brandon Plant
+
+// JS File that contains the navigation of the web app
+
 import "./logo.svg"
 import "./App.css";
 import "./globals.css";

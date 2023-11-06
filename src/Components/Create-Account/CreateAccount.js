@@ -1,3 +1,7 @@
+// Author: Hayden
+// Test Case 3: The system should register the user account to the system
+// Test Case 4: The system should store the user’s email, first name, and last name in the database 
+
 //Create Account page
 
 // react and firebase imports

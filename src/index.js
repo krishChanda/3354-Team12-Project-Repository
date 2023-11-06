@@ -1,3 +1,8 @@
+// Author: Brandon Plant
+// Test Case 5: The system should open the extension when the icon on Chrome is clicked
+
+// Main webframe for chrome extension
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";

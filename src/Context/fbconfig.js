@@ -1,3 +1,5 @@
+// Author: Krish Chanda
+
 // JS File that contains the API KEY for the user Authentication (login and create account)
 // Your web app's Firebase configuration (DO NOT MODIFY THIS FILE)
 export default {

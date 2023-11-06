@@ -1,3 +1,6 @@
+// Author: Khaled Elkhaled
+// Test Case 10: The System should retrieve user info from the database
+
 // JS file that contains getUser function call --> will retrieve the user information of the current user logged in
 
 // react/firebase/firestore imports

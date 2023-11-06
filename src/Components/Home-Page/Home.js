@@ -1,3 +1,5 @@
+// Author: Krish Chanda
+
 import logo from "../../../src/logo.svg";
 import "./Home.css";
 import "../../../src/globals.css";
