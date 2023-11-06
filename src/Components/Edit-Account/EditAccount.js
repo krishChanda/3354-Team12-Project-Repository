@@ -23,7 +23,7 @@ const EditAccount = () => {
         // For example, you can save user data to a database
         updateUserInfo(firstName, lastName);
         // Navigate to the "/home" path
-        navigate('/home');
+        navigate('/viewaccount');
     }
   };
 
