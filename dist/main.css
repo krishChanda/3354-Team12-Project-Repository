@@ -250,6 +250,18 @@ input:hover {
   .Home-link {
     color: #61dafb;
   }
+
+  .Home-button {
+    background-color: #90a0f6; /* Change the background color to blue */
+    color: white; /* Change the text color to white */
+    font-size: 15px; /* Increase the font size */
+    padding: 15px 130px; /* Add padding to make the button larger */
+    border: none; /* Remove the default button border */
+    border-radius: 30px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    font-weight: bold;
+    font-family: 'Lato' , sans-serif;
+  }
   
   @keyframes Home-logo-spin {
     from {
@@ -259,6 +271,87 @@ input:hover {
       transform: rotate(360deg);
     }
   }
+/* InsertLink.css */
+
+.app-container {
+    text-align: center;
+    background-color: #E8EFFF;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.white-box {
+  background-color: #ffffff;
+  width: 70%;
+  max-width: 450px;
+  height: 175px;
+  position: relative; /* Change to relative positioning */
+  margin: 0 auto; /* Center the white box horizontally */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  top: -45px;
+}
+
+.instruction-text {
+    color: #7281D2;
+    font-size: 32px;
+    width: 95%;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.product-preview {
+    color: #000000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+input {
+  padding: 5px 10px 5px 40px;
+  font-size: 14px;
+  line-height: 70px;
+  outline: 0;
+  display: block;
+  width: 90%;
+  box-sizing: border-box;
+  outline: black;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px 0px rgba(62, 62, 62, 0.25);
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  color: #515151;
+}
+
+
+
+.input-container {
+  margin: 10px 0;
+}
+
+.container {
+  text-align: center; /* Center the button text */
+  margin-top: 20px; /* Add space above the button */
+}
+
+.insert-button {
+  background-color: #90a0f6;
+  color: white;
+  font-size: 15px;
+  padding: 10px 30px;
+  width: 320px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+}
+
 .Login {
     text-align: center;
     background-color: #E8EFFF;
@@ -431,6 +524,14 @@ input:hover {
   margin-bottom: -10px;
 }
 
+.ViewAccount-text{
+    color: #515151;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .edit-button {
   background-color: #90a0f6; /* Change the background color to blue */
   color: white; /* Change the text color to white */
@@ -439,8 +540,8 @@ input:hover {
   border: none; /* Remove the default button border */
   border-radius: 30px; /* Add rounded corners */
   cursor: pointer; /* Change the cursor to a pointer on hover */
-font-weight: bold;
-font-family: 'Lato' , sans-serif;
+  font-weight: bold;
+  font-family: 'Lato' , sans-serif;
 }
 
 

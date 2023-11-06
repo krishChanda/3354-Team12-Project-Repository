@@ -36,6 +36,18 @@
   .Home-link {
     color: #61dafb;
   }
+
+  .Home-button {
+    background-color: #90a0f6; /* Change the background color to blue */
+    color: white; /* Change the text color to white */
+    font-size: 15px; /* Increase the font size */
+    padding: 15px 130px; /* Add padding to make the button larger */
+    border: none; /* Remove the default button border */
+    border-radius: 30px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    font-weight: bold;
+    font-family: 'Lato' , sans-serif;
+  }
   
   @keyframes Home-logo-spin {
     from {

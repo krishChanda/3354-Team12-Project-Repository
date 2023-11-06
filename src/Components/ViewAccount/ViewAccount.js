@@ -46,9 +46,9 @@ function ViewAccount(){
               const { email, firstname, lastname } = user;
               return (
                 <li key={user.id}>
-                  <h4>Email: {email}</h4>
-                  <h4>First Name: {firstname}</h4>
-                  <h4>Last Name: {lastname}</h4>
+                  <h4 className="ViewAccount-text">Email: {email}</h4>
+                  <h4 className="ViewAccount-text">First Name: {firstname}</h4>
+                  <h4 className="ViewAccount-text">Last Name: {lastname}</h4>
                 </li>
               );
             })

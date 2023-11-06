@@ -7,6 +7,7 @@ import Home from "./Components/Home-Page/Home"; // home page import
 import Login from "./Components/Login/Login"; // login page import
 import ViewAccount from "./Components/ViewAccount/ViewAccount"; // view account import
 import EditAccount from "./Components/Edit-Account/EditAccount";
+import InsertLink from "./Components/Insert-Link/InsertLink";
 
 import { AuthContext } from "./Context/AuthContext"; // Webpage security import
 import { Protected } from "./Context/Protected"; // Protects pages from non-users
@@ -35,6 +36,10 @@ function App() {
     {
       path:"editaccount",
       element:<Protected><EditAccount/></Protected>
+    },
+    {
+      path:"insertlink",
+      element:<Protected><InsertLink/></Protected>
     }
 
   ])
