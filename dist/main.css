@@ -21,6 +21,8 @@ code {
         monospace;
 }
 
+/* Author: Brandon Plant */
+
 .App {
   text-align: center;
 
@@ -95,6 +97,8 @@ code {
   background-color: #cbdce8;
 }
 
+/* Author: Hayden Bell */
+
 /* .FormTextBox {
     width: 100%;
     height: 40px;
@@ -163,6 +167,8 @@ input:hover {
     box-shadow: 2px 2px 2px #333;
 }
 
+/* Author: Hayden Bell */
+
 .Create-Accout {
     display: flex;
     flex-direction: column;
@@ -212,6 +218,8 @@ input:hover {
     background: #90A0F6;
     box-shadow: 0px 4px 6px 0px rgba(62, 62, 62, 0.25);
 }
+/* Author: Krish Chanda */
+
 .Home {
     text-align: center;
   }
@@ -271,6 +279,7 @@ input:hover {
       transform: rotate(360deg);
     }
   }
+/* Author: Daniel Ng */
 /* InsertLink.css */
 
 .app-container {
@@ -352,6 +361,8 @@ input {
   font-family: 'Lato', sans-serif;
 }
 
+/* Author: Saipravallika Akula */
+
 .Login {
     text-align: center;
     background-color: #E8EFFF;
@@ -360,7 +371,7 @@ input {
 }
 
 .Login-logo {
-    margin-top: 200px;
+    margin-top: 200px; 
 }
 
 .Login-title {
@@ -476,6 +487,8 @@ input:hover {
     box-shadow: 0px 4px 6px 0px rgba(62, 62, 62, 0.25);
 }
 
+/* Author: Khaled Elkhaled */
+
 .ViewAccount{
   text-align: center;
 }
@@ -550,6 +563,8 @@ input:hover {
 
 
 
+
+/* Author: Adi Kandakurtikar */
 
 .Body {
     background-color: #E8EFFF;
@@ -629,6 +644,8 @@ input:hover {
     color: rgb(89, 93, 136);
     cursor: pointer;
 }
+/* Author: Hayden Bell */
+
 .Navbar {
   text-align: center;
 }
