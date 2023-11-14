@@ -1,6 +1,6 @@
 // Author: Hayden Bell
 
-import React, {useState} from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./FormTextBox.css";
 
@@ -22,7 +22,7 @@ const FormTextBox = (FormTextBoxProps) => {
             <div className="container">
                 <form className="form">
                     <div className="FormTextBox-input">
-                        <span class="icon">
+                        <span className="icon">
                             <img src={FormTextBoxProps.icon} alt="email icon" />
                         </span>
                         <input
