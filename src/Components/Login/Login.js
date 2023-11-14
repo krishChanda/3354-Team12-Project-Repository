@@ -5,9 +5,11 @@
 // imports for react and firebase
 import React from "react";
 import "./Login.css";
+import "../../globals.css";
 import logo from "../../logo.svg";
 import email_icon from "../../../public/icons/email_icon.svg";
 import password_icon from "../../../public/icons/password_icon.svg";
+import arrow_icon from "../../../public/icons/arrow_icon.svg";
 
 import { useState } from "react"; // useState --> keeps track of user status (logged in or not logged in)
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth"; // import authentication function
@@ -79,28 +81,7 @@ function Login() {
             >
                 <span className="Login-button-text"> LOGIN </span>
                 {/* This adds the arrow icon to the right of the word "login" */}
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="11"
-                    viewBox="0 0 16 11"
-                    fill="none"
-                >
-                    <path
-                        d="M1 5.5H15"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    />
-                    <path
-                        d="M8 1L15 5.5L8 10"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    />
-                </svg>
+                <img src={arrow_icon} alt="arrow icon" />
             </button>
 
             <br></br>
@@ -113,7 +94,10 @@ function Login() {
             {/* The words "Sign up" take you to the create account page */}
             <span className="Login-signup-text">
                 {" "}
-                <Link to="/createaccount"> Sign up</Link>{" "}
+                <Link className="Link-color" to="/createaccount">
+                    {" "}
+                    Sign up
+                </Link>{" "}
             </span>
 
             <br></br>

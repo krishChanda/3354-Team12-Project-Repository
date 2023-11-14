@@ -9,7 +9,10 @@ import React from "react";
 import FormTextBox from "../Shared-Components/FormTextBox";
 import email_icon from "../../../public/icons/email_icon.svg";
 import password_icon from "../../../public/icons/password_icon.svg";
+import arrow_icon from "../../../public/icons/arrow_icon.svg";
+import name_icon from "/public/icons/id_card.svg";
 import "./CreateAccount.css";
+import "../../globals.css";
 
 import { useState } from "react"; // useState --> keeps track of user status (logged in or not logged in)
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"; // import authentication function
@@ -80,14 +83,14 @@ const CreateAccount = () => {
                 onChange={(e) => setFirstName(e)}
                 type="firstname"
                 name="firstname"
-                icon={email_icon}
+                icon={name_icon}
                 placeholder="FIRST NAME"
             />
             <FormTextBox
                 onChange={(e) => setLastName(e)}
                 type="lastname"
                 name="lastname"
-                icon={email_icon}
+                icon={name_icon}
                 placeholder="LASTNAME"
             />
             <FormTextBox
@@ -104,7 +107,15 @@ const CreateAccount = () => {
                 icon={password_icon}
                 placeholder="CONFIRM PASSWORD"
             />
-            <span>
+            <div className="Create-Account-Bottom-Div">
+                <div>
+                    <h3 className="Create-Account-ptext"> Returning User? </h3>
+                    <h3 className="Create-Account-signin-text">
+                        {" "}
+                        <Link className="Link-color" to="/"> Login in</Link>{" "}
+                    </h3>
+                </div>
+
                 <button
                     className="Create-Account-button"
                     onClick={(e) => {
@@ -112,13 +123,9 @@ const CreateAccount = () => {
                     }}
                 >
                     Sign Up
+                    <img src={arrow_icon} style={{marginLeft: 10}} alt="arrow icon" />
                 </button>
-            </span>
-            <span className="Create-Account-ptext"> Returning User? </span>
-            <span className="Create-Account-signin-text">
-                {" "}
-                <Link to="/"> Login in</Link>{" "}
-            </span>
+            </div>
         </div>
     );
 };
