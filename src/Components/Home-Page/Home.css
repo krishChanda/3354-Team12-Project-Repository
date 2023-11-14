@@ -6,6 +6,8 @@
   
   .Home-logo {
     height: 40vmin;
+    margin-top: 40px;
+    margin-bottom: 40px;
     pointer-events: none;
   }
   
@@ -49,6 +51,7 @@
     cursor: pointer; /* Change the cursor to a pointer on hover */
     font-weight: bold;
     font-family: 'Lato' , sans-serif;
+    margin-bottom: 20px;
   }
   
   @keyframes Home-logo-spin {

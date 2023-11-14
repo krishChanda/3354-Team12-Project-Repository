@@ -28,7 +28,7 @@ function Home() {
         </div>
         <img src={logo} className="Home-logo" alt="logo" />
         <button className="Home-button" onClick={handleInsertLink}> Create Sentiment Score </button>
-        <span><Link to="/viewaccount">View Account</Link></span>
+        <span><Link className="Link-color" to="/viewaccount">View Account</Link></span>
       </header>
     </div>
   );

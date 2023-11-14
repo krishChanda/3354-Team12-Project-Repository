@@ -36,7 +36,7 @@ const EditAccount = () => {
     <div className='Body'>
         {/* Allows to upload profile picture */}
         <div className='Profile'>
-            <img src={profilePic} className='Image'/>
+            <img src={profilePic} alt="profil_pic" className='Image'/>
         </div>
         <div className='ChangeProfile'>
             <input type="file" id='fileInput' placeholder='Change Image' style={{display: 'none'}} onChange={(e) => setProfilePic(URL.createObjectURL(e.target.files[0]))}/>
