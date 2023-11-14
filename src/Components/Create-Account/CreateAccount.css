@@ -1,0 +1,70 @@
+/* Author: Hayden Bell */
+
+.Create-Account {
+    background-color: #e8efff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 2px; */
+    /* height: 90vh; */
+}
+
+.Create-Account-title {
+    /* margin-left: 60px; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #000;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 0.75;
+}
+
+.Create-Account-signin-text {
+    color: #7281d2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Create-Account-ptext {
+    color: #515151;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.Create-Account-button {
+    border: none;
+    color: white;
+    width: 110px;
+    height: 45px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    /* margin-left: 15px; */
+    cursor: pointer;
+    border-radius: 25px;
+    background: #90a0f6;
+    box-shadow: 0px 4px 6px 0px rgba(62, 62, 62, 0.25);
+}
+
+button:hover {
+    border: 1px solid #90a0f6;
+    box-shadow: 2px 2px 2px #90a0f6;
+}
+
+.Create-Account-Bottom-Div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 80%;
+}

@@ -1,0 +1,38 @@
+/* Author: Hayden Bell */
+
+.Navbar {
+  text-align: center;
+}
+
+.Navbar-header {
+  background-color: #b9bff4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: full;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.Navbar-logo {
+  flex-basis: 16.666667%;
+  position: relative;
+  width: auto;
+  height: 32px;
+}
+
+.Navbar-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.Navbar-profile {
+  flex-basis: 16.666667%;
+  position: relative;
+  width: auto;
+  height: 32px;
+}

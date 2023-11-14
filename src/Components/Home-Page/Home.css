@@ -1,0 +1,64 @@
+/* Author: Krish Chanda */
+
+.Home {
+    text-align: center;
+  }
+  
+  .Home-logo {
+    height: 40vmin;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .Home-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .Home-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: calc(10px + 2vmin);
+    color: black;
+  }
+  .Home-header-div {
+    align-items: center;
+    width: 60%;
+    padding-top: 20px;
+  }
+  
+  .Home-title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .Home-link {
+    color: #61dafb;
+  }
+
+  .Home-button {
+    background-color: #90a0f6; /* Change the background color to blue */
+    color: white; /* Change the text color to white */
+    font-size: 15px; /* Increase the font size */
+    padding: 15px 130px; /* Add padding to make the button larger */
+    border: none; /* Remove the default button border */
+    border-radius: 30px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    font-weight: bold;
+    font-family: 'Lato' , sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes Home-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
