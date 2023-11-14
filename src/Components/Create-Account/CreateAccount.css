@@ -1,20 +1,22 @@
 /* Author: Hayden Bell */
 
-.Create-Accout {
+.Create-Account {
+    background-color: #e8efff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    height: 100vh;
-    background-color: #e8efff;
+    /* gap: 2px; */
+    /* height: 100vh; */
 }
 
 .Create-Account-title {
-    margin-left: 60px;
-    text-align: left;
+    /* margin-left: 60px; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
     color: #000;
-    font-size: 32px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 650;
     line-height: 0.75;
