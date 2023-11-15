@@ -23,7 +23,7 @@ function App() {
   const router = createHashRouter([
     {
       path:"/",
-      element:<Login/>
+      element:<Home/>
     },
     {
       path:"/home",

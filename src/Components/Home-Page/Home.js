@@ -6,6 +6,8 @@ import "../../../src/globals.css";
 import { Link } from "react-router-dom"; // navigation import
 import { useNavigate } from "react-router-dom";
 import InsertLink from "../Insert-Link/InsertLink";
+import getSentimentScore from "../../Hooks/getSentimentScore";
+import { useEffect, useState } from "react";
 
 
 // DELETE link to view account after navbar nagivation is fixed
