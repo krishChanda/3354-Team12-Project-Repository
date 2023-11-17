@@ -1,0 +1,54 @@
+/* LinkVerified.css */
+
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8efff;
+    height: 100vh;
+    position: relative;
+    }
+   
+   
+   .app-container img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 20px; /* Adjust the value to shift the image down */
+   }
+   
+   
+   .instruction-text {
+    font-size: x-large;
+    color: #7281d2;
+    text-align: center;
+    margin-top: 20px; /* Adjust the value to shift the text down */
+   }
+   
+   
+   .container {
+    text-align: center;
+   }
+   
+   
+   .insert-button {
+    background-color: #90a0f6;
+    color: white;
+    font-size: 15px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    }
+   
+   
+   .cancel-button {
+    color: #7281d2;
+    background-color: #e8efff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; /* Adjust the value to provide spacing between the buttons */
+   }

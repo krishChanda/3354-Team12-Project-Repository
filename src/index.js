@@ -12,10 +12,6 @@ import Navbar from "./Components/Shared-Components/Navbar";
 import fbconfig from "./Context/fbconfig"; // User authentication API Key
 import { initializeApp} from "firebase/app"; // Firebase import
 import { getFirestore } from "firebase/firestore";
-import Login from "./Components/Login/Login";
-import ViewAccount from "./Components/ViewAccount/ViewAccount";
-import EditAccount from "./Components/Edit-Account/EditAccount";
-import InsertLink from "./Components/Insert-Link/InsertLink";
 
 const app = initializeApp(fbconfig); //User Authentication API Call
 export const db = getFirestore(app); //Database API Call --> sets connection to the cloud firestore

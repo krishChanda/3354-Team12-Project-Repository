@@ -12,6 +12,8 @@ import Login from "./Components/Login/Login"; // login page import
 import ViewAccount from "./Components/ViewAccount/ViewAccount"; // view account import
 import EditAccount from "./Components/Edit-Account/EditAccount";
 import InsertLink from "./Components/Insert-Link/InsertLink";
+import SaveSentimentScore from "./Components/Save-Setiment-Score/SaveSentimentScore";
+import LinkVerified from "./Components/Link-Verified/LinkVerified";
 
 import { AuthContext } from "./Context/AuthContext"; // Webpage security import
 import { Protected } from "./Context/Protected"; // Protects pages from non-users
@@ -44,7 +46,15 @@ function App() {
     {
       path:"insertlink",
       element:<Protected><InsertLink/></Protected>
-    }
+    },
+    {
+      path:"linkverified",
+      element:<Protected><LinkVerified/></Protected>
+    },
+    {
+      path:"savesentimentscore",
+      element:<Protected><SaveSentimentScore/></Protected>
+    },
 
   ])
 
