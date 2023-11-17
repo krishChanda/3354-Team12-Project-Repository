@@ -31,6 +31,7 @@ function Home() {
         <span><Link className="Link-color" to="/viewaccount">View Account</Link></span>
       </header>
     </div>
+
   );
 }
 
