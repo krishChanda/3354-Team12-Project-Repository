@@ -14,6 +14,7 @@ import EditAccount from "./Components/Edit-Account/EditAccount";
 import InsertLink from "./Components/Insert-Link/InsertLink";
 import SaveSentimentScore from "./Components/Save-Setiment-Score/SaveSentimentScore";
 import LinkVerified from "./Components/Link-Verified/LinkVerified";
+import SentScore from "./Components/View-Sent-Score/SentScore";
 
 import { AuthContext } from "./Context/AuthContext"; // Webpage security import
 import { Protected } from "./Context/Protected"; // Protects pages from non-users
@@ -52,9 +53,13 @@ function App() {
       element:<Protected><LinkVerified/></Protected>
     },
     {
+      path:"viewsentimentscore",
+      element:<Protected><SentScore/></Protected>
+    },
+    {
       path:"savesentimentscore",
       element:<Protected><SaveSentimentScore/></Protected>
-    },
+    }
 
   ])
 

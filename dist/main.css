@@ -878,6 +878,107 @@ input:hover {
     cursor: pointer;
     margin-top: 10px; /* Adjust the value to provide spacing between the buttons */
    }
+.SentScore{
+    text-align: center;
+}
+
+.app-container {
+background-color: #e8efff;
+height: 100vh;
+
+}
+
+.title-text {
+font-size: 16px;
+color: black;
+font-family: 'Lato' , sans-serif;
+margin-top: 10px;
+margin-left: 40px;
+}
+
+.scores-container {
+background-color: #e8efff;
+overflow: scroll;
+margin-left: 10px;
+margin-right: 10px;
+}
+
+.viewScore-container {
+margin-top: 10px;
+margin-bottom: 10px;
+background-color: #ffffff;
+}
+
+.delete-scores-button {
+background-color: #90a0f6;
+padding: 30px 30px;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+}
+
+.product-name {
+font-size: 15px;
+color: black;
+font-family: 'Lato' , sans-serif;
+}
+
+.product-description {
+font-size: 12px;
+color: gray;
+font-family: 'Lato' , sans-serif;
+}
+
+.product-image {
+background-color: black;
+}
+.empty-box {
+    position: relative;
+    width: 350px;
+    height: 70px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+   
+    
+}
+
+.empty-box h2 {
+    margin-left: 70px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.empty-box p {
+    margin-left: 70px;
+    
+    color: black;
+}
+
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 30px; /* Adjust button width as needed */
+    height: 30px; /* Adjust button height as needed */
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-size: 30px;
+}
+.delete-button {
+    background-color: #ff6666; /* Adjust button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    margin-right: 10px; /* Adjust margin-right to space the delete button from text */
+}
 /* Author: Hayden Bell */
 
 .Navbar {
