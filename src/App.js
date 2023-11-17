@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import "./globals.css";
 import CreateAccount from "./Components/Create-Account/CreateAccount";
-
+import SentScore from "./Components/SentScore/SentScore";
 function App() {
   return (
     <div className="App">
