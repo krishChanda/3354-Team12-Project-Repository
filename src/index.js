@@ -11,6 +11,7 @@ import Login from "./Components/Login/Login";
 import ViewAccount from "./Components/ViewAccount/ViewAccount";
 import EditAccount from "./Components/Edit-Account/EditAccount";
 import InsertLink from "./Components/Insert-Link/InsertLink";
+import SaveSentimentScore from "./Components/Save-Sentiment-Score/SaveSentimentScore";
 
 const app = initializeApp(fbconfig); //User Authentication API Call
 export const db = getFirestore(app); //Database API Call --> sets connection to the cloud firestore
