@@ -2,9 +2,9 @@
 
 import logo from "../../../src/logo.svg";
 import "./Home.css";
+import "../../globals.css";
 import { Link } from "react-router-dom"; // navigation import
 import { useNavigate } from "react-router-dom";
-
 
 
 // DELETE link to view account after navbar nagivation is fixed

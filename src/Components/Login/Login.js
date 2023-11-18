@@ -84,24 +84,18 @@ function Login() {
                 <img src={arrow_icon} alt="arrow icon" />
             </button>
 
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-
-            {/* Adds the text at the bottom of the page */}
-            <span className="Login-ptext"> Don't have an account? </span>
-            {/* The words "Sign up" take you to the create account page */}
-            <span className="Login-signup-text">
-                {" "}
-                <Link className="Link-color" to="/createaccount">
+            <div className="Login-create-account-text">
+                {/* Adds the text at the bottom of the page */}
+                <span className="Login-ptext"> Don't have an account? </span>
+                {/* The words "Sign up" take you to the create account page */}
+                <span className="Login-signup-text">
                     {" "}
-                    Sign up
-                </Link>{" "}
-            </span>
-
-            <br></br>
-            <br></br>
+                    <Link className="Link-color" to="/createaccount">
+                        {" "}
+                        Sign up
+                    </Link>{" "}
+                </span>
+            </div>
         </div>
     );
 }
