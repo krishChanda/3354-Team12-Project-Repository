@@ -32,14 +32,18 @@ function InsertLink() {
       <h1 className="instruction-text">
         Open the Product Page and Insert Below
       </h1>
+      <br></br>
       <input
         type="text"
         name="productlink"
         placeholder="INSERT PRODUCT LINK"
         onChange={(e) => setProductLink(e.target.value)} 
       />
+      <br></br>
       <button className="insert-button" onClick={handleInsertLink}>Insert Link</button>
+      <br></br>
       <button className="insert-button" onClick={handleHome}> Cancel </button>
+      <br></br>
     </div>
   );
 }

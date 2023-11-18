@@ -1,40 +1,31 @@
 .SentScore{
     text-align: center;
-}
-
-.app-container {
-background-color: #e8efff;
-height: 100vh;
-
+    background: #CCD1FD;
+    
 }
 
 .title-text {
-font-size: 16px;
-color: black;
-font-family: 'Lato' , sans-serif;
-margin-top: 10px;
-margin-left: 40px;
+    margin-left: 37px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 0.75;
 }
 
-.scores-container {
-background-color: #e8efff;
-overflow: scroll;
-margin-left: 10px;
-margin-right: 10px;
-}
 
-.viewScore-container {
-margin-top: 10px;
-margin-bottom: 10px;
-background-color: #ffffff;
-}
-
-.delete-scores-button {
-background-color: #90a0f6;
-padding: 30px 30px;
-border: none;
-border-radius: 30px;
-cursor: pointer;
+.create-button {
+    background-color: #90a0f6;
+    color: white;
+    font-size: 15px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
 }
 
 .product-name {
@@ -55,13 +46,22 @@ background-color: black;
 .empty-box {
     position: relative;
     width: 350px;
-    height: 70px;
+    height: 80px;
     background-color: white;
     margin-bottom: 20px;
     margin-left: 20px;
     border-radius: 10px;
-   
-    
+}
+.image-button {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    background-color: white;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .empty-box h2 {

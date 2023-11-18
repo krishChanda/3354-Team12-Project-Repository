@@ -1,20 +1,15 @@
-// Author: Saipravallika Akula
-
 import React, { useState } from 'react';
-import "./SaveSentimentScore.css";
-import { getAuth } from 'firebase/auth';
+import "./ViewPastScore.css";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useAddProduct } from '../../Hooks/useAddProduct';
-import { Link } from 'react-router-dom';
 
-const SaveSentimentScore = () => {
+
+const ViewPastScore = () => {
+  // function declarations
   const location = useLocation();
-  const auth = getAuth();
   const navigate = useNavigate();
-  const {addProduct} = useAddProduct();
 
-  const user = auth.currentUser;
+  // variable declarations
   const { productLink, keywords, sentimentScore, productName } = location.state || {};
   const keywordsLst = keywords.split(' ');
 
@@ -70,24 +65,13 @@ const SaveSentimentScore = () => {
   };
 
   // changes color base on score value
-  const handleSaveSentiment = async () => {
-    try {
-      await addProduct({
-        userID: user.uid,
-        amazonLink: productLink,
-        keywords: keywords,
-        productName: productName,
-        sentimentScore: sentimentScore,
-      });
-      navigate("/viewsentimentscore");
-    } catch (error) {
-      console.error('Error saving sentiment score:', error);
-    }
+  const handleViewSentScore = async () => {
+    navigate('/viewsentimentscore');
   };
 
   return (
  
-    <div className="SaveSentimentScore">
+    <div className="ViewPastScore">
       <h1 className="Save-title">Product Summary</h1>
       <p className="review-text">{productName}</p>
       {/* Score display section */}
@@ -131,14 +115,12 @@ const SaveSentimentScore = () => {
       </div>
 
       <button className="Save-button">
-            <span className="Save-button-text" onClick={() => handleSaveSentiment()}> Save Sentiment Score </span>
+            <span className="Save-button-text" onClick={() => handleViewSentScore()}> Back </span>
       </button>
-      <br></br>
-      <span><Link className="Link-color" to="/home">Home</Link></span>
 
     </div>
 
   );
 };
 
-export default SaveSentimentScore;
+export default ViewPastScore;

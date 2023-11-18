@@ -2,10 +2,9 @@
 
 import logo from "../../../src/logo.svg";
 import "./Home.css";
-import "../../../src/globals.css";
 import { Link } from "react-router-dom"; // navigation import
 import { useNavigate } from "react-router-dom";
-import InsertLink from "../Insert-Link/InsertLink";
+
 
 
 // DELETE link to view account after navbar nagivation is fixed
@@ -29,6 +28,7 @@ function Home() {
         <img src={logo} className="Home-logo" alt="logo" />
         <button className="Home-button" onClick={handleInsertLink}> Create Sentiment Score </button>
         <span><Link className="Link-color" to="/viewaccount">View Account</Link></span>
+        <span><Link className="Link-color" to="/viewsentimentscore">View Past Scores</Link></span>
       </header>
     </div>
 

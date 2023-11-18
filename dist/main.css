@@ -302,88 +302,6 @@ button:hover {
       transform: rotate(360deg);
     }
   }
-/* Author: Daniel Ng */
-/* InsertLink.css */
-
-.app-container {
-    text-align: center;
-    background-color: #E8EFFF;
-    padding-top: 50px;
-    padding-bottom: 30px;
-}
-
-.white-box {
-  background-color: #ffffff;
-  width: 70%;
-  max-width: 450px;
-  height: 175px;
-  position: relative; /* Change to relative positioning */
-  margin: 0 auto; /* Center the white box horizontally */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  top: -45px;
-}
-
-.instruction-text {
-    color: #7281D2;
-    font-size: 32px;
-    width: 95%;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.product-preview {
-    color: #000000;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-input {
-  padding: 5px 10px 5px 40px;
-  font-size: 14px;
-  line-height: 70px;
-  outline: 0;
-  display: block;
-  width: 90%;
-  box-sizing: border-box;
-  outline: black;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 4px 6px 0px rgba(62, 62, 62, 0.25);
-  border: 0px solid #ccc;
-  border-radius: 4px;
-  color: #515151;
-}
-
-
-
-.input-container {
-  margin: 10px 0;
-}
-
-.container {
-  text-align: center; /* Center the button text */
-  margin-top: 20px; /* Add space above the button */
-}
-
-.insert-button {
-  background-color: #90a0f6;
-  color: white;
-  font-size: 15px;
-  padding: 10px 30px;
-  width: 320px;
-  height: 40px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-  font-family: 'Lato', sans-serif;
-}
-
 /* Author: Saipravallika Akula */
 
 .Login {
@@ -674,6 +592,88 @@ input:hover {
     color: rgb(89, 93, 136);
     cursor: pointer;
 }
+/* Author: Daniel Ng */
+/* InsertLink.css */
+
+.app-container {
+    text-align: center;
+    background-color: #E8EFFF;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.white-box {
+  background-color: #ffffff;
+  width: 70%;
+  max-width: 450px;
+  height: 175px;
+  position: relative; /* Change to relative positioning */
+  margin: 0 auto; /* Center the white box horizontally */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  top: -45px;
+}
+
+.instruction-text {
+    color: #7281D2;
+    font-size: 32px;
+    width: 95%;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.product-preview {
+    color: #000000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+input {
+  padding: 5px 10px 5px 40px;
+  font-size: 14px;
+  line-height: 70px;
+  outline: 0;
+  display: block;
+  width: 90%;
+  box-sizing: border-box;
+  outline: black;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px 0px rgba(62, 62, 62, 0.25);
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  color: #515151;
+}
+
+
+
+.input-container {
+  margin: 10px 0;
+}
+
+.container {
+  text-align: center; /* Center the button text */
+  margin-top: 20px; /* Add space above the button */
+}
+
+.insert-button {
+  background-color: #90a0f6;
+  color: white;
+  font-size: 15px;
+  padding: 10px 30px;
+  width: 320px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+}
+
 /* Author: Saipravallika Akula */
 
 .SaveSentimentScore {
@@ -880,41 +880,32 @@ input:hover {
    }
 .SentScore{
     text-align: center;
-}
-
-.app-container {
-background-color: #e8efff;
-height: 100vh;
-
+    background: #CCD1FD;
+    
 }
 
 .title-text {
-font-size: 16px;
-color: black;
-font-family: 'Lato' , sans-serif;
-margin-top: 10px;
-margin-left: 40px;
+    margin-left: 37px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 0.75;
 }
 
-.scores-container {
-background-color: #e8efff;
-overflow: scroll;
-margin-left: 10px;
-margin-right: 10px;
-}
 
-.viewScore-container {
-margin-top: 10px;
-margin-bottom: 10px;
-background-color: #ffffff;
-}
-
-.delete-scores-button {
-background-color: #90a0f6;
-padding: 30px 30px;
-border: none;
-border-radius: 30px;
-cursor: pointer;
+.create-button {
+    background-color: #90a0f6;
+    color: white;
+    font-size: 15px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
 }
 
 .product-name {
@@ -935,13 +926,22 @@ background-color: black;
 .empty-box {
     position: relative;
     width: 350px;
-    height: 70px;
+    height: 80px;
     background-color: white;
     margin-bottom: 20px;
     margin-left: 20px;
     border-radius: 10px;
-   
-    
+}
+.image-button {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    background-color: white;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .empty-box h2 {
@@ -978,6 +978,154 @@ background-color: black;
     color: white;
     font-size: 16px;
     margin-right: 10px; /* Adjust margin-right to space the delete button from text */
+}
+.ViewPastScore {
+    text-align: center;
+    background-color: #E8EFFF;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.Save-title {
+    margin-left: 37px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 0.75;
+}
+
+.rectangle-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.rectangle1 {
+    width: 323px;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 5px;
+    background: #CCD1FD;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle2 {
+    width: 323px;
+    height: 68px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 5px;
+    background: #CCD1FD;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle3 {
+    width: 323px;
+    min-height: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 5px;
+    background: #CCD1FD;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle-text {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.review-text {
+    font-size: 15px;
+    font-weight: 550;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.keywords-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px; /* gap between words */
+}
+
+.keyword-outline {
+    padding: 10px;
+    border: 1.5px solid #90A0F6;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+.Save-button-text {
+    color: white;
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 25px;
+}
+
+.Save-button {
+    border: none;
+    width: 323px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: #7281D2;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.score-text {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.score-text.green {
+    color: #0F7726;
+}
+
+.score-text.orange {
+    color: #FF9F10;
+}
+
+.score-text.red {
+    color: #C51111;
+}
+
+.progress-bar.green {
+    color: #0F7726;
+}
+
+.progress-bar.orange {
+    color: #FF9F10;
+}
+
+.progress-bar.red {
+    color: #C51111;
+}
+
+.progressBar-bg {
+    width: 290px;
+    height: 15px;
+    border-radius: 10px;
+    background: white;
+}
+
+.progress-bar-container {
+    width: 290px;
+    margin-top: -15px;
+}
+
+.progress-bar {
+    height: 15px;
+    border-radius: 10px;
 }
 /* Author: Hayden Bell */
 

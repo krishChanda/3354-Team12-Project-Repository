@@ -1,6 +1,6 @@
 // Js file that provides function call to retrive product and sentiment score data from database
 
-import { collection, onSnapshot, query, where } from "firebase/firestore";
+import { collection, onSnapshot, query, where, orderBy } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from ".."; // database connection import
 import { getAuth, onAuthStateChanged } from "firebase/auth"; 
@@ -37,7 +37,8 @@ export const useGetProduct = () => {
                 // collect user data from the database where userID matches current userID
                 const queryUserInfo = query(
                     userCollectionRef, 
-                    where("userID", "==", userID)
+                    where("userID", "==", userID),
+                    orderBy("createdAt", "desc")
                 );
                 // data collection method
                 unsubscribe = onSnapshot(queryUserInfo, (snapshot) => {
