@@ -19,8 +19,8 @@ function InsertLink() {
   const handleInsertLink = () => {
     // Check if the productLink contains "www.amazon.com"
     if (productLink.includes("www.amazon.com")) {
-      // The link contains "www.amazon.com"
-      alert("Amazon link is valid.");
+      // The link contains "www.amazon.com" --> take to link verifed page
+      navigate('/linkverified', { state: { productLink } });
     } else {
       // The link doesn't contain "www.amazon.com"
       alert("Please enter a valid Amazon link.");
@@ -32,14 +32,18 @@ function InsertLink() {
       <h1 className="instruction-text">
         Open the Product Page and Insert Below
       </h1>
+      <br></br>
       <input
         type="text"
         name="productlink"
         placeholder="INSERT PRODUCT LINK"
         onChange={(e) => setProductLink(e.target.value)} 
       />
+      <br></br>
       <button className="insert-button" onClick={handleInsertLink}>Insert Link</button>
+      <br></br>
       <button className="insert-button" onClick={handleHome}> Cancel </button>
+      <br></br>
     </div>
   );
 }

@@ -20,3 +20,4 @@ export const useAddProduct = () => {
     // return the function to call 
     return { addProduct };
 }
+

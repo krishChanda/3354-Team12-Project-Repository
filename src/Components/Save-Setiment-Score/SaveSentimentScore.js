@@ -2,15 +2,25 @@
 
 import React, { useState } from 'react';
 import "./SaveSentimentScore.css";
+import { getAuth } from 'firebase/auth';
+import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useAddProduct } from '../../Hooks/useAddProduct';
+import { Link } from 'react-router-dom';
 
 const SaveSentimentScore = () => {
-  const [sentimentScore, setSentimentScore] = useState(9);
+  const location = useLocation();
+  const auth = getAuth();
+  const navigate = useNavigate();
+  const {addProduct} = useAddProduct();
 
-  const keywords = ['Quality', 'Product', 'Review', 'Highlight', 'Consistent', 'Review', 'Highlight', 'Consistent'];
+  const user = auth.currentUser;
+  const { productLink, keywords, sentimentScore, productName } = location.state || {};
+  const keywordsLst = keywords.split(' ');
 
   // puts the keywords into the outline << formating
   const renderKeywords = () => {
-    return keywords.map((keyword, index) => (
+    return keywordsLst.map((keyword, index) => (
       <div key={index} className="keyword-outline">
         {keyword}
       </div>
@@ -19,7 +29,7 @@ const SaveSentimentScore = () => {
 
   // changes the height of rectangle 3
   const calculateRectangle3Height = () => {
-    const numberOfRows = Math.ceil(keywords.length / 3); // Assuming 3 keywords per row
+    const numberOfRows = Math.ceil(keywordsLst.length / 3); // Assuming 3 keywords per row
     // Calculate the height based on the number of rows
     const rowHeight = 45; // Adjust the row height as needed
     const padding = 15;
@@ -59,11 +69,27 @@ const SaveSentimentScore = () => {
     }
   };
 
+  // changes color base on score value
+  const handleSaveSentiment = async () => {
+    try {
+      await addProduct({
+        userID: user.uid,
+        amazonLink: productLink,
+        keywords: keywords,
+        productName: productName,
+        sentimentScore: sentimentScore,
+      });
+      navigate("/viewsentimentscore");
+    } catch (error) {
+      console.error('Error saving sentiment score:', error);
+    }
+  };
+
   return (
  
     <div className="SaveSentimentScore">
       <h1 className="Save-title">Product Summary</h1>
-
+      <p className="review-text">{productName}</p>
       {/* Score display section */}
       <div className="rectangle-container">
         <div className="rectangle1">
@@ -105,8 +131,10 @@ const SaveSentimentScore = () => {
       </div>
 
       <button className="Save-button">
-            <span className="Save-button-text"> Save Sentiment Score </span>
+            <span className="Save-button-text" onClick={() => handleSaveSentiment()}> Save Sentiment Score </span>
       </button>
+      <br></br>
+      <span><Link className="Link-color" to="/home">Home</Link></span>
 
     </div>
 
