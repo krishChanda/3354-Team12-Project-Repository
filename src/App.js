@@ -41,23 +41,23 @@ function App() {
       element:<Protected><ViewAccount/></Protected>
     },
     {
-      path:"editaccount",
+      path:"/editaccount",
       element:<Protected><EditAccount/></Protected>
     },
     {
-      path:"insertlink",
+      path:"/insertlink",
       element:<Protected><InsertLink/></Protected>
     },
     {
-      path:"linkverified",
+      path:"/linkverified",
       element:<Protected><LinkVerified/></Protected>
     },
     {
-      path:"viewsentimentscore",
+      path:"/viewsentimentscore",
       element:<Protected><SentScore/></Protected>
     },
     {
-      path:"savesentimentscore",
+      path:"/savesentimentscore",
       element:<Protected><SaveSentimentScore/></Protected>
     }
 
