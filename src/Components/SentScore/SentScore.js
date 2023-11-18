@@ -1,5 +1,6 @@
 import React from "react";
 import "./SentScore.css";
+import Delete from './trace.svg'
 
 
 function SentScore() {
@@ -20,18 +21,18 @@ function SentScore() {
                 <br></br>
                 
                 {/* Adding 5 separate empty white boxes with text and a clickable ">" button */}
-                {[1, 2, 3, 4, 5].map((index) => (
+                {[1].map((index) => (
                     <div key={index} className="empty-box">
                         <br></br>
-                        <h2>Example Product {index}</h2>
-                        <p>Example Product {index} Review...</p>
+                        <h2>Product Name {index}</h2>
+                        
 
                         {/* Clickable ">" button */}
                         <button className="arrow-button" onClick={() => handleButtonClick(index)}>
                             &gt;
                         </button>
                         <button className="image-button" onClick={() => handleButtonClick(index)}>
-                            <img src='/trash.png' alt="trash Icon" width="40" height="40" />
+                            <img src= {Delete} alt="D" width="40" height="40" />
                         </button>
                     </div>
                 ))}
