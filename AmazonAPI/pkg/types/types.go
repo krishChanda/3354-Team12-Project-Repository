@@ -1,4 +1,4 @@
-package main
+package types
 
 import (
 	"net/http"
@@ -18,13 +18,13 @@ type Url struct {
 	Url string `json:"link"`
 }
 
-type product struct {
+type Product struct {
 	Asin         string `json:"asin"`
 	Title        string `json:"title"`
 	Keywords	 []string `json:"keywords"`
 }
 
-type review struct {
+type Review struct {
 	ID         string   `json:"id"`
 	Title      string   `json:"title"`
 	Text       string   `json:"text"`
@@ -38,10 +38,10 @@ type review struct {
 	Thumbnails []string `json:"thumbnails"`
 }
 
-type productReview struct {
+type ProductReview struct {
 	Error        bool     `json:"error"`
 	Asin         string   `json:"asin"`
 	TotalReviews int      `json:"reviewCount"`
 	LastPage     int      `json:"lastPage"`
-	Reviews      []review `json:"reviews"`
+	Reviews      []Review `json:"reviews"`
 }

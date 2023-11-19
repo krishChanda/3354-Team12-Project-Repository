@@ -4,19 +4,20 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	// "time"
-	"net/http"
-	"github.com/gin-contrib/cors"
 	"AmazonAPI/pkg/api"
+	"AmazonAPI/pkg/types"
+	"github.com/gin-contrib/cors"
+	"net/http"
 )
 
-var links = []Url{}
+var links = []types.Url{}
 
 func getLink(context *gin.Context) {
 	context.IndentedJSON(http.StatusOK, links)
 }
 
 func addLink(context *gin.Context) {
-	var link Url
+	var link types.Url
 	if err := context.Bind(&link); err != nil {
 		return
 	}
@@ -30,11 +31,11 @@ func main() {
 
 	// server := NewServer(":8080")
 	// server.Run()
-
+	api.GetAmazonProductReviews(&types.Product{Asin: "1107189632", Title: "The Hobbit", Keywords: []string{"hobbit", "tolkien", "book"}})
 	router := gin.Default()
 	router.Use(cors.Default())
-	router.GET("/api/links", getLink)
-	router.POST("/api/links", addLink)
-	router.Run("localhost:8080")
+	// router.GET("/api/links", getLink)
+	// router.POST("/api/links", addLink)
+	// router.Run("localhost:8080")
 
 }
