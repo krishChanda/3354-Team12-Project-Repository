@@ -18,6 +18,12 @@ type Url struct {
 	Url string `json:"link"`
 }
 
+type product struct {
+	Asin         string `json:"asin"`
+	Title        string `json:"title"`
+	Keywords	 []string `json:"keywords"`
+}
+
 type review struct {
 	ID         string   `json:"id"`
 	Title      string   `json:"title"`

@@ -6,6 +6,7 @@ import (
 	// "time"
 	"net/http"
 	"github.com/gin-contrib/cors"
+	"AmazonAPI/pkg/api"
 )
 
 var links = []Url{}
@@ -22,6 +23,7 @@ func addLink(context *gin.Context) {
 	links = append(links, link)
 	fmt.Println(link)
 	context.IndentedJSON(http.StatusCreated, link)
+	fmt.Println(api.ParseLink(link.Url))
 }
 
 func main() {
