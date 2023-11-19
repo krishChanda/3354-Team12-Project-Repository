@@ -3,6 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
+
+	// "fmt"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -38,9 +41,17 @@ func makeHTTPHandleFunc(f apiFunc) http.HandlerFunc {
 }
 
 func (s *APIServer) handleLink(w http.ResponseWriter, r *http.Request) error {
-	vars := mux.Vars(r)
-	fmt.Println(vars)
-	return nil
+	if r.Method == "POST"{
+		log.Println("test")
+		return s.handleGetLink(w, r)
+	}
+
+	return fmt.Errorf("invalid method %s", r.Method)
+}
+
+func (s *APIServer) handleGetLink(w http.ResponseWriter, r *http.Request) error {
+	url := mux.Vars(r)["url"]
+	return WriteJSON(w, http.StatusOK, &Url{url})
 }
 
 func (s *APIServer) Run() error {

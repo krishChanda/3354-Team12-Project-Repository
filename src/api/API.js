@@ -5,13 +5,17 @@ PostLink.PropTypes = {
 };
 
 export default async function PostLink(PostLinkProps) {
+
+    const ProductLink = {
+        url: PostLinkProps.url,
+    };
+
     return fetch("http://localhost:8080/api/links", {
         method: "POST",
-        mode: "cors",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(PostLinkProps.url),
+        body: JSON.stringify(ProductLink),
     })
         .then((response) => response.json())
         .then((response) => {

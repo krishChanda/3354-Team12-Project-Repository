@@ -14,6 +14,10 @@ type APIError struct {
 
 type apiFunc func(http.ResponseWriter, *http.Request) error
 
+type Url struct {
+	Url string `json:"url"`
+}
+
 type review struct {
 	ID         string   `json:"id"`
 	Title      string   `json:"title"`
