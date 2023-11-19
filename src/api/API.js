@@ -5,9 +5,8 @@ PostLink.PropTypes = {
 };
 
 export default async function PostLink(PostLinkProps) {
-
     const ProductLink = {
-        url: PostLinkProps.url,
+        link: PostLinkProps.url,
     };
 
     return fetch("http://localhost:8080/api/links", {
