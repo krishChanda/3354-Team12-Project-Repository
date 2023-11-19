@@ -21,7 +21,7 @@ func AmazonAPI() {
 
 	req, _ := http.NewRequest("GET", url, nil)
 
-	req.Header.Add("X-RapidAPI-Key", "bdd65e8a0dmsh8689fc8f37300f0p1fd32bjsn48033f7ff47b")
+	req.Header.Add("X-RapidAPI-Key", "<key>")
 	req.Header.Add("X-RapidAPI-Host", "axesso-axesso-amazon-data-service-v1.p.rapidapi.com")
 
 	res, err := http.DefaultClient.Do(req)
