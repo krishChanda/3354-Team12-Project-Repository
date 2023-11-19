@@ -5,7 +5,25 @@ import (
 	"context"
 	openai "github.com/sashabaranov/go-openai"
 	"os"
+	"strings"
 )
+
+func ParseString(str string) []string {
+	var keywords []string
+
+	lines := strings.Split(str, "\n")
+
+	for _, line := range lines {
+		item := strings.TrimSpace(strings.TrimLeft(line, "1234567890."))
+		if item != "" {
+			keywords = append(keywords, item)
+		}
+	}
+
+
+	return keywords
+
+}
 
 func OpenAIAPI(reviews []string) ([]string, error){
 	// loads api key from .env file	
@@ -31,12 +49,12 @@ func OpenAIAPI(reviews []string) ([]string, error){
 			},
 		},
 	)
+	
 	if err != nil {
 		fmt.Printf("ChatCompletion error: %v\n", err)
 		return nil, err
 	}
 
-	fmt.Println(resp.Choices[0].Message.Content)
-	fmt.Println(resp)
-	return nil, nil
+	keywords := ParseString(resp.Choices[0].Message.Content)
+	return keywords, nil
 }

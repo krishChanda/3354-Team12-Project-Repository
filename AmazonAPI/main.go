@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	// "time"
 	"github.com/gin-contrib/cors"
+	"AmazonAPI/pkg/api"
 )
 
 
@@ -14,8 +15,8 @@ func main() {
 	// api.GetAmazonProductReviews(&types.Product{Asin: "1107189632", Title: "The Hobbit", Keywords: []string{"hobbit", "tolkien", "book"}})
 	router := gin.Default()
 	router.Use(cors.Default())
-	// router.GET("/api/links", getLink)
-	// router.POST("/api/links", addLink)
-	// router.Run("localhost:8080")
+	router.GET("/api/links", api.GetLink)
+	router.POST("/api/links", api.AddLink)
+	router.Run("localhost:8080")
 
 }
