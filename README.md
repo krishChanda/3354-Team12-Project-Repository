@@ -1,4 +1,5 @@
 # 3354-Team12-Project-Repository
+Reviewify Project Code
 
 ## *Important Note*
 ### Please select the "backend/auth" branch to view the full up to date code for our project
