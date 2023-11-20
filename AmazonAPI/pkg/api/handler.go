@@ -1,5 +1,7 @@
 package api
 
+// Hayden Bell
+
 import (
 	"AmazonAPI/pkg/types"
 	"encoding/json"
@@ -8,6 +10,7 @@ import (
 	"github.com/joho/godotenv"
 	"log"
 	"net/http"
+	"os"
 )
 
 var links = []types.Url{}
@@ -25,6 +28,9 @@ func Handler(link string) *types.Product {
 	// ensures that the server only has one link at a time
 	ResetLinks()
 	product.Keywords = keywords
+
+	// adds product to firebase
+	// Firebase(product)
 
 	return product
 
@@ -45,6 +51,12 @@ func AddLink(context *gin.Context) {
 	PRODUCT = *product
 	fmt.Println(PrettyPrint(product))
 	context.IndentedJSON(http.StatusCreated, PRODUCT)
+	writeProduct(&PRODUCT)
+}
+
+func writeProduct(product *types.Product) {
+	file, _ := json.MarshalIndent(product, "", " ")
+	_ = os.WriteFile("/public/product.json", file, 0644)
 
 }
 

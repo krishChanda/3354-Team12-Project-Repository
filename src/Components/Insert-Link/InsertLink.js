@@ -17,17 +17,14 @@ function InsertLink() {
         navigate("/home");
     };
 
-    const handleInsertLink = async () =>{
+    const handleInsertLink = async () => {
         // Check if the productLink contains "www.amazon.com"
         if (productLink.includes("www.amazon.com")) {
             // The link contains "www.amazon.com"
-            const product = await PostLink({ url: productLink });
-            const product2 = await GetProduct();
+            const productPost = await PostLink({ url: productLink });
+            console.log("product: ", productPost);
+            // alert(JSON.stringify(Product));
             alert("Amazon link is valid.");
-            alert(product);
-            alert(product2);
-            alert(product2.Keywords)
-            alert(product.Title)
         } else {
             // The link doesn't contain "www.amazon.com"
             alert("Please enter a valid Amazon link.");

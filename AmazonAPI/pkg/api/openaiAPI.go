@@ -1,8 +1,10 @@
 package api
 
+//Hayden Bell
+
 import (
-	"fmt"
 	"context"
+	"fmt"
 	openai "github.com/sashabaranov/go-openai"
 	"os"
 	"strings"
@@ -20,21 +22,18 @@ func ParseString(str string) []string {
 		}
 	}
 
-
 	return keywords
 
 }
 
-func OpenAIAPI(reviews []string) ([]string, error){
-	// loads api key from .env file	
+func OpenAIAPI(reviews []string) ([]string, error) {
+	// loads api key from .env file
 	LoadEnv()
 	openAIAPIKey := os.Getenv("OPENAI_API_KEY")
-
 
 	// convert []string to string
 	reviewsString := fmt.Sprint(reviews)
 	prompt := fmt.Sprintf("Identify the top 15 keywords for the following list of reviews:\n\n%s", reviewsString)
-
 
 	client := openai.NewClient(openAIAPIKey)
 	resp, err := client.CreateChatCompletion(
@@ -43,7 +42,7 @@ func OpenAIAPI(reviews []string) ([]string, error){
 			Model: openai.GPT3Dot5Turbo,
 			Messages: []openai.ChatCompletionMessage{
 				{
-					Role: openai.ChatMessageRoleUser,
+					Role:    openai.ChatMessageRoleUser,
 					Content: prompt,
 				},
 			},

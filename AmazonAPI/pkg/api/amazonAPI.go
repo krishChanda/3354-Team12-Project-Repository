@@ -1,5 +1,7 @@
 package api
 
+// Hayden Bell
+
 import (
 	"AmazonAPI/pkg/types"
 	"encoding/json"
@@ -11,7 +13,6 @@ import (
 	"regexp"
 )
 
-
 func ParseLink(link string) []string {
 	r, _ := regexp.Compile("https://www.amazon.com/(.*?)/dp/(.*?)/")
 	results := []string{}
@@ -20,8 +21,7 @@ func ParseLink(link string) []string {
 	return results
 }
 
-
-func parseResponse(res *[]byte) (*types.ProductReview, error){
+func parseResponse(res *[]byte) (*types.ProductReview, error) {
 
 	var productReview types.ProductReview
 
@@ -33,7 +33,7 @@ func parseResponse(res *[]byte) (*types.ProductReview, error){
 
 func getAPIResponse(asin string) (*http.Response, error) {
 	apiUrl := fmt.Sprintf("https://amazon-merchant-data.p.rapidapi.com/get-reviews?asin=%s&country=us&page=1", asin)
-	
+
 	// loads api key from .env file
 	LoadEnv()
 	amazonAPIKey := os.Getenv("AMAZON_API_KEY")
@@ -64,7 +64,7 @@ func getAPIResponse(asin string) (*http.Response, error) {
 }
 
 func GetAmazonProductReviews(product *types.Product) (*types.ProductReview, error) {
-	
+
 	// gets the response
 	res, err := getAPIResponse(product.Asin)
 
