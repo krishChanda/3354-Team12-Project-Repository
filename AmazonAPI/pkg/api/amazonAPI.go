@@ -31,11 +31,6 @@ func parseResponse(res *[]byte) (*types.ProductReview, error){
 	return &productReview, nil
 }
 
-func PrettyPrint(i interface{}) string {
-	s, _ := json.MarshalIndent(i, "", "\t")
-	return string(s)
-}
-
 func getAPIResponse(asin string) (*http.Response, error) {
 	apiUrl := fmt.Sprintf("https://amazon-merchant-data.p.rapidapi.com/get-reviews?asin=%s&country=us&page=1", asin)
 	
@@ -101,7 +96,7 @@ func GetAmazonProductReviews(product *types.Product) (*types.ProductReview, erro
 	}
 
 	// prints the response for debugging
-	fmt.Println(PrettyPrint(productReview))
+	// fmt.Println(PrettyPrint(productReview))
 
 	return productReview, nil
 

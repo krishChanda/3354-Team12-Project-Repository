@@ -15,7 +15,7 @@ func main() {
 	// api.GetAmazonProductReviews(&types.Product{Asin: "1107189632", Title: "The Hobbit", Keywords: []string{"hobbit", "tolkien", "book"}})
 	router := gin.Default()
 	router.Use(cors.Default())
-	router.GET("/api/links", api.GetLink)
+	router.GET("/api/links", api.GetProduct)
 	router.POST("/api/links", api.AddLink)
 	router.Run("localhost:8080")
 

@@ -49,12 +49,13 @@ func OpenAIAPI(reviews []string) ([]string, error){
 			},
 		},
 	)
-	
+
 	if err != nil {
 		fmt.Printf("ChatCompletion error: %v\n", err)
 		return nil, err
 	}
 
 	keywords := ParseString(resp.Choices[0].Message.Content)
+	fmt.Println(keywords)
 	return keywords, nil
 }

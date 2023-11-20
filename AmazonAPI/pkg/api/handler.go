@@ -2,6 +2,8 @@ package api
 
 import (
 	"AmazonAPI/pkg/types"
+	"encoding/json"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	"log"
@@ -9,8 +11,9 @@ import (
 )
 
 var links = []types.Url{}
+var PRODUCT = types.Product{}
 
-func Handler(link string) (*types.Product) {
+func Handler(link string) *types.Product {
 
 	reviews, product := RunAmazonAPI(link)
 	keywords, err := OpenAIAPI(reviews)
@@ -27,8 +30,8 @@ func Handler(link string) (*types.Product) {
 
 }
 
-func GetLink(context *gin.Context) {
-	context.IndentedJSON(http.StatusOK, links)
+func GetProduct(context *gin.Context) {
+	context.IndentedJSON(http.StatusOK, PRODUCT)
 }
 
 func AddLink(context *gin.Context) {
@@ -39,8 +42,9 @@ func AddLink(context *gin.Context) {
 	// runs amazon api and openai api then returns keywords
 	links = append(links, link)
 	product := Handler(link.Url)
-
-	context.JSON(http.StatusCreated, product)
+	PRODUCT = *product
+	fmt.Println(PrettyPrint(product))
+	context.IndentedJSON(http.StatusCreated, PRODUCT)
 
 }
 
@@ -68,6 +72,7 @@ func RunAmazonAPI(link string) ([]string, *types.Product) {
 
 func ResetLinks() {
 	links = []types.Url{}
+	PRODUCT = types.Product{}
 }
 
 func GetUrl() types.Url {
@@ -80,4 +85,9 @@ func LoadEnv() {
 	if err != nil {
 		log.Fatal("Error loading .env file", err)
 	}
+}
+
+func PrettyPrint(i interface{}) string {
+	s, _ := json.MarshalIndent(i, "", "\t")
+	return string(s)
 }

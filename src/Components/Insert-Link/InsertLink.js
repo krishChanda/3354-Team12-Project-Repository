@@ -7,7 +7,7 @@ import React from "react";
 import "./InsertLink.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import PostLink from "../../api/API";
+import { PostLink, GetProduct } from "../../api/API";
 
 function InsertLink() {
     const navigate = useNavigate();
@@ -21,8 +21,13 @@ function InsertLink() {
         // Check if the productLink contains "www.amazon.com"
         if (productLink.includes("www.amazon.com")) {
             // The link contains "www.amazon.com"
-            await PostLink({ url: productLink });
+            const product = await PostLink({ url: productLink });
+            const product2 = await GetProduct();
             alert("Amazon link is valid.");
+            alert(product);
+            alert(product2);
+            alert(product2.Keywords)
+            alert(product.Title)
         } else {
             // The link doesn't contain "www.amazon.com"
             alert("Please enter a valid Amazon link.");

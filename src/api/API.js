@@ -4,7 +4,23 @@ PostLink.PropTypes = {
     url: PropTypes.string,
 };
 
-export default async function PostLink(PostLinkProps) {
+export async function GetProduct(){
+    return fetch("http://localhost:8080/api/links", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+    })
+        .then((response) => response.json())
+        .catch((error) => {
+            console.log("Error: ", error);
+            return {};
+        });
+    
+};
+
+export async function PostLink(PostLinkProps) {
     const ProductLink = {
         link: PostLinkProps.url,
     };
@@ -13,6 +29,7 @@ export default async function PostLink(PostLinkProps) {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
+            "Accept": "application/json",
         },
         body: JSON.stringify(ProductLink),
     })

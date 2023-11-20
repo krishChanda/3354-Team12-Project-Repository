@@ -28,6 +28,10 @@ type Product struct {
 	Keywords []string `json:"keywords"`
 }
 
+type Products struct {
+	Products []Product `json:"products"`
+}
+
 type Review struct {
 	ID         string `json:"id"`
 	Title      string `json:"title"`
