@@ -1,3 +1,6 @@
+// Author: Saipravallika Akula
+// Test Case 15: The system should allow the user to create a sentiment score 
+// Test Case 22: The system should store the Amazon link to the user’s profile if the user clicks on save sentiment score
 // LinkVerified.js
 
 import React from "react";

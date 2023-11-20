@@ -1,3 +1,5 @@
+// Author: Krish Chanda
+
 // ProductBox.js
 // this file contains the react component that displays the container for each product that the user saves to their profile
 // container for the SentScore.js file

@@ -1,3 +1,5 @@
+// Author: Khaled Elkhaled
+// Test case: 19: The system should retrieve and list all past saved sentiment scores
 // Js file that provides function call to retrive product and sentiment score data from database
 
 import { collection, onSnapshot, query, where, orderBy } from "firebase/firestore";

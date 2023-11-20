@@ -1,3 +1,7 @@
+//Author: Adi Kandakurtikar
+
+//Test Case 20: The system should allow the user to delete a saved sentiment score from the profile and database
+
 import { doc, deleteDoc, collection } from "firebase/firestore";
 import { db } from ".."; // Adjust the path accordingly
 

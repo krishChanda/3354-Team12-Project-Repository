@@ -1,3 +1,4 @@
+// Author: Khaled and Brandon
 import React from "react";
 import "./SentScore.css";
 import { useGetProduct } from "../../Hooks/useGetProduct";

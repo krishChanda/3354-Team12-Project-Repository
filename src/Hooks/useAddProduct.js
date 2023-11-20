@@ -1,3 +1,8 @@
+// Author: Brandon Plant
+
+// Testcase 18: The system should save sentiment analysis scores to the user profile
+// Testcase 24: The system stores Amazon review keywords in the database
+
 import { addDoc, collection, serverTimestamp } from "firebase/firestore"
 import { db } from ".."; // database import
 
