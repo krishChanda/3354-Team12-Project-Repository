@@ -1,7 +1,5 @@
 # 3354-Team12-Project-Repository
 
-## *Important Note*
-### Please select the "backend/auth" branch to view the full up-to-date code for our project
 
 This documentation was created by the development team at Reviewify to provide a solution throughout the software life cycle. The intended audience for this software will be everyday Amazon shoppers looking to find the best products for their needs. The software is made up of a few components such as a user-based extension, API scraper, ML model and AI, database, and server. These components will provide the users with an averaged and filtered review across all reviews for that product.
 
