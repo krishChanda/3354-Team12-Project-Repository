@@ -1,8 +1,10 @@
 package main
+
 // Hayden Bell
 
 import (
 	"AmazonAPI/pkg/api"
+	"AmazonAPI/pkg/types"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"time"
@@ -23,7 +25,7 @@ func main() {
 		AllowCredentials: true,
 		MaxAge:           12 * time.Hour,
 	}))
-
+	api.Firebase(&types.Product{Asin: "1107189632", Title: "The Hobbit", Keywords: []string{"hobbit", "tolkien", "book"}})
 	router.GET("/api/links.json", api.GetProduct)
 	router.GET("/api/links", api.GetProduct)
 	router.POST("/api/links", api.AddLink)

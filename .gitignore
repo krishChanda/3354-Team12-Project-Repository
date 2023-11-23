@@ -2,3 +2,4 @@ node_modules
 .vscode
 AmazonAPI/.env
 AmazonAPI/FirebaseConfig.json
+AmazonAPI/pkg/api/ServiceAccountKey.json
