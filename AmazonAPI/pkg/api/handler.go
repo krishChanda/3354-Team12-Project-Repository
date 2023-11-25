@@ -6,11 +6,12 @@ import (
 	"AmazonAPI/pkg/types"
 	"encoding/json"
 	"fmt"
-	"github.com/gin-gonic/gin"
-	"github.com/joho/godotenv"
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 var links = []types.Url{}
@@ -52,6 +53,7 @@ func AddLink(context *gin.Context) {
 	fmt.Println(PrettyPrint(product))
 	context.IndentedJSON(http.StatusCreated, PRODUCT)
 	writeProduct(&PRODUCT)
+	Firebase(&PRODUCT)
 }
 
 func writeProduct(product *types.Product) {
