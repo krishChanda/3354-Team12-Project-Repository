@@ -18,76 +18,56 @@ function ViewAccount(){
     navigate('/home');
   };
   
-
   return(
-    <div className="app-container">
-
-    
     <div className="ViewAccount">
-    <div className="pf-picture">
-    <br></br>
-    <br></br>
-  
 
-    <img src ='/pfp.png' 
-    alt = "Profile Picture"
-    width="80"
-    height="80"
-    />
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    
-    </div>
+      {/* profile photo */}
+      <img src ='/pfp.png' alt = "Profile" width="80" height="80"/>
 
-    {/* Displays the email, first name, and last name of the registered user */}
-    <div className="white-box">
-        <div className="input-container">
-        <ul>
-          {userInfo.length > 0 ? (
-            userInfo.map((user) => {
-              const { email, firstname, lastname } = user;
+      {/* Displays the email, first name, and last name of the registered user */}
+
+      <ul>
+        {userInfo.length > 0 ? (
+          userInfo.map((user) => {
+            const { email, firstname, lastname } = user;
               return (
-                <li key={user.id}>
-                  <h4 className="ViewAccount-text">Email: {email}</h4>
-                  <h4 className="ViewAccount-text">First Name: {firstname}</h4>
-                  <h4 className="ViewAccount-text">Last Name: {lastname}</h4>
-                </li>
+               <div key={user.id}>
+                  {/* Email Box */}
+                  <h3 className="box-heading">Email</h3>
+                  <div className="input-container">
+                      <p className="ViewAccount-text">{email}</p>
+                  </div>
+
+                  {/* First Name Box */}
+                  <h3 className="box-heading">First Name</h3>
+                  <div className="input-container">
+                      <p className="ViewAccount-text">{firstname}</p>
+                  </div>
+
+                  {/* Last Name Box */}
+                  <h3 className="box-heading">Last Name</h3>
+                  <div className="input-container">
+                      <p className="ViewAccount-text">{lastname}</p>
+                  </div>
+                </div>
               );
             })
           ) : (
-            <li>Loading</li>
+            <div>Loading</div>
           )}
-        </ul>
+      </ul>
+        
+      {/* Buttons which allow the user to navigate through the pages */}
+      <div className="edit-profile">
+        <div className="container">
+          <button className="edit-button" onClick={handleEditProfile}>Edit Profile</button>      
         </div>
-      </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-    
-    {/* Buttons which allow the user to navigate through the pages */}
-    <div className="edit-profile">
-      <div className="container">
-        <button className="edit-button" onClick={handleEditProfile}>Edit Profile</button>
-      
-      </div>
-      <div className="container">
-        <button className="edit-button" onClick={handleHome}> Home </button>
+
+        <div className="container">
+          <button className="edit-button" onClick={handleHome}> Home </button>
+        </div>          
       </div>
       
-    </div>
-    </div>
     </div>
   )
 }

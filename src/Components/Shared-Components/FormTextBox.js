@@ -22,8 +22,8 @@ const FormTextBox = (FormTextBoxProps) => {
             <div className="container">
                 <form className="form">
                     <div className="FormTextBox-input">
-                        <span className="icon">
-                            <img src={FormTextBoxProps.icon} alt="email icon" />
+                        <span className="Form-icon">
+                            <img src={FormTextBoxProps.icon} alt={FormTextBoxProps.name}/>
                         </span>
                         <input
                             type={FormTextBoxProps.type}

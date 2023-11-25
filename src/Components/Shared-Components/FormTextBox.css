@@ -16,15 +16,16 @@
 } */
 
 .FormTextBox-outer {
-    max-width: 450px;
+    max-width: 600px;
     display: flex;
     margin: auto;
     align-items: center;
     justify-content: center;
+    height: 75px;
 }
 .container {
     width: 90%;
-    max-width: 600px;
+    max-width: 450px;
     margin: auto;
 }
 
@@ -50,11 +51,12 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
     color: #333;
+    height: 40px;
 }
 
-.icon {
+.Form-icon {
     position: absolute;
-    left: 15px;
+    left: 25px;
     top: 0;
     font-size: 24px;
     height: 100%;

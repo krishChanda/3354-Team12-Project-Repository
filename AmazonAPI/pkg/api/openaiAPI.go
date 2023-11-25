@@ -1,6 +1,7 @@
 package api
 
 //Hayden Bell
+//Test Case 16: The System should display common keywords of the Amazon Product link
 
 import (
 	"context"

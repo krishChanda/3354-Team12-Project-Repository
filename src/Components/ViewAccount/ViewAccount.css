@@ -2,42 +2,32 @@
 
 .ViewAccount{
   text-align: center;
+  background-color: #e8efff; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 92vh;
 }
-.app-container {
-  background-color: #e8efff; /* Set your desired background color */
-  height: 100vh;
-}
-.pf-picture{
-  text-align: center;
-  color: black;
-  background-color: #e8efff;
-  font-size: large;
-}
-.white-box{
-  background-color: #ffffff;
-  width: 70%;
-  height: 30%;
-  max-width: 450px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
 
-}
-.input-label {
-  font-size: 15px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-family: 'Lato' , sans-serif;
-  
-}
 .input-container {
-  margin: 10px 0;
-} 
+  margin: 10px;
+  padding: 15px;
+  background-color: white; 
+  filter: drop-shadow(0px 4px 6px rgba(62, 62, 62, 0.25));
+  border-radius: 8px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-heading {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
 .container{
   margin-bottom: 20px;
 }
@@ -50,7 +40,7 @@
 
 .ViewAccount-text{
     color: #515151;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
