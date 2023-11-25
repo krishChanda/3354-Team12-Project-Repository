@@ -24,6 +24,7 @@ type Keywords struct {
 }
 
 type Product struct {
+	AmazonLink string 
 	Asin     string   `json:"asin"`
 	Title    string   `json:"title"`
 	Keywords []string `json:"keywords"`

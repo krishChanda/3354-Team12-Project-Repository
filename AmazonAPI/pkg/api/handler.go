@@ -70,6 +70,7 @@ func PostKeywords(context *gin.Context) {
 
 func RunAmazonAPI(link string) ([]string, *types.Product) {
 	var product types.Product
+	product.AmazonLink = link
 	product.Asin = ParseLink(link)[1]
 	product.Title = ParseLink(link)[0]
 	productReview, err := GetAmazonProductReviews(&product)
