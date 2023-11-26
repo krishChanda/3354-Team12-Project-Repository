@@ -37,7 +37,7 @@ func Firebase(Product *types.Product) {
 		log.Fatal("Error initializing firestore. ", err)
 	}
 
-	docref, results, err := client.Collection("sentimentdoc").Add(context.Background(), map[string]interface{}{
+	docref, results, err := client.Collection("keywords").Add(context.Background(), map[string]interface{}{
 		"amazonLink":  Product.AmazonLink,
 		"keywords":    Product.Keywords,
 		"asin":        Product.Asin,
