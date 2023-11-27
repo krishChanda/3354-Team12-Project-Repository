@@ -1,13 +1,14 @@
 /* Author: Khaled and Brandon */
 .SentScore{
     text-align: center;
-    background: #CCD1FD;
-    
+    background: #E8EFFF;
+    height: 100svh; 
 }
 
 .title-text {
     margin-left: 37px;
     margin-bottom: 20px;
+    margin-top: 10px;
     text-align: left;
     color: #000;
     font-size: 32px;
@@ -15,7 +16,6 @@
     font-weight: 650;
     line-height: 0.75;
 }
-
 
 .create-button {
     background-color: #90a0f6;
@@ -25,78 +25,15 @@
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
     font-family: 'Lato', sans-serif;
-}
-
-.product-name {
-font-size: 15px;
-color: black;
-font-family: 'Lato' , sans-serif;
-}
-
-.product-description {
-font-size: 12px;
-color: gray;
-font-family: 'Lato' , sans-serif;
-}
-
-.product-image {
-background-color: black;
-}
-.empty-box {
-    position: relative;
-    width: 350px;
-    height: 80px;
-    background-color: white;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    border-radius: 10px;
-}
-.image-button {
-    position: absolute;
-    top: 20px;
-    left: 10px;
-    background-color: white;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.empty-box h2 {
-    margin-left: 70px;
     margin-bottom: 10px;
-    font-size: 15px;
+    margin-top: 10px;
 }
 
-.empty-box p {
-    margin-left: 70px;
-    
-    color: black;
-}
-
-.arrow-button {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    width: 30px; /* Adjust button width as needed */
-    height: 30px; /* Adjust button height as needed */
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: black;
-    font-size: 30px;
-}
-.delete-button {
-    background-color: #ff6666; /* Adjust button color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-    font-size: 16px;
-    margin-right: 10px; /* Adjust margin-right to space the delete button from text */
+.product-box {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
