@@ -1,7 +1,3 @@
-// Author: Daniel Ng
-// Test Case 21: The system should be able to open a past saved sentiment score from the user’s profile
-
-
 import React, { useState } from 'react';
 import "./ViewPastScore.css";
 import { useLocation } from "react-router-dom";

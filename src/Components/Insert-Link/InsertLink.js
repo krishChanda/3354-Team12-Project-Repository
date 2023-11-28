@@ -22,7 +22,7 @@ function InsertLink() {
     if (productLink.includes("www.amazon.com")) {
       const product = await PostLink({ url: productLink });
       console.log(product);
-      alert("Finished parsing product link.")
+      //alert("Finished parsing product link.")
       // The link contains "www.amazon.com" --> take to link verifed page
       navigate('/linkverified', { state: { productLink } });
     } else {

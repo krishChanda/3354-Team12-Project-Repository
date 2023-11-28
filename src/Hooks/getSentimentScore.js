@@ -6,7 +6,8 @@ import React from 'react'
 import OpenAI from 'openai'
 
 const getSentimentScore = async (words) => {
-    const openai = new OpenAI({apiKey: "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", dangerouslyAllowBrowser: true})
+    // put api key here
+    const openai = new OpenAI({apiKey: "", dangerouslyAllowBrowser: true})
 
     const completion = await openai.chat.completions.create({
         messages: [

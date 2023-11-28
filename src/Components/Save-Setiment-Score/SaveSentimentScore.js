@@ -17,7 +17,7 @@ const SaveSentimentScore = () => {
 
   const user = auth.currentUser;
   const { productLink, keywords, sentimentScore, productName } = location.state || {};
-  const keywordsLst = keywords.split(' ');
+  const keywordsLst = keywords?.split(' ') || [];
 
   // puts the keywords into the outline << formating
   const renderKeywords = () => {
