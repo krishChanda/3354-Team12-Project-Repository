@@ -1,0 +1,1167 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400|PT+Sans:400,700);
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    margin: 0;
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 400px;
+    min-height: 600px;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+/* Author: Brandon Plant */
+
+.App {
+  text-align: center;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-header-div {
+  align-items: center;
+  width: 60%; 
+  padding-top: 20px;
+}
+
+.App-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Main-bg {
+  background-color: #e8efff;
+}
+
+.Secondary-bg {
+  background-color: #b9bff4;
+}
+
+.Button-color {
+  background-color: #90a0f6;
+}
+
+.Link-color {
+  color: #7281d2;
+}
+
+.Yellow-higlight-color {
+  background-color: #fceaab;
+}
+
+.Light-blue-color {
+  background-color: #cbdce8;
+}
+
+/* Author: Hayden Bell */
+
+/* .FormTextBox {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 4px 4px #ccc;
+} */
+
+.FormTextBox-outer {
+    max-width: 600px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+}
+.container {
+    width: 90%;
+    max-width: 450px;
+    margin: auto;
+}
+
+.FormTextBox-input {
+    margin: 10px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    padding: 5px 10px 5px 40px;
+    font-size: 14px;
+    line-height: 30px;
+    outline: 0;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 4px 4px #ccc;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    height: 40px;
+}
+
+.Form-icon {
+    position: absolute;
+    left: 25px;
+    top: 0;
+    font-size: 24px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input:hover {
+    border: 1px solid #333;
+    box-shadow: 2px 2px 2px #333;
+}
+/* Author: Hayden Bell */
+
+.Create-Account {
+    background-color: #e8efff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 2px; */
+    height: 95vh;
+}
+
+.Create-Account-title {
+    /* margin-left: 60px; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #000;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 0.75;
+}
+
+.Create-Account-signin-text {
+    color: #7281d2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Create-Account-ptext {
+    color: #515151;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.Create-Account-button {
+    border: none;
+    color: white;
+    width: 110px;
+    height: 45px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    /* margin-left: 15px; */
+    cursor: pointer;
+    border-radius: 25px;
+    background: #90a0f6;
+    box-shadow: 0px 4px 6px 0px rgba(62, 62, 62, 0.25);
+}
+
+button:hover {
+    border: 1px solid #90a0f6;
+    box-shadow: 2px 2px 2px #90a0f6;
+}
+
+.Create-Account-Bottom-Div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+/* Author: Krish Chanda */
+
+.Home {
+    text-align: center;
+  }
+  
+  .Home-logo {
+    height: 40vmin;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .Home-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .Home-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: calc(10px + 2vmin);
+    color: black;
+  }
+  .Home-header-div {
+    align-items: center;
+    width: 60%;
+    padding-top: 20px;
+  }
+  
+  .Home-title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .Home-link {
+    color: #61dafb;
+  }
+
+  .Home-button {
+    background-color: #90a0f6; /* Change the background color to blue */
+    color: white; /* Change the text color to white */
+    font-size: 15px; /* Increase the font size */
+    padding: 15px 130px; /* Add padding to make the button larger */
+    border: none; /* Remove the default button border */
+    border-radius: 30px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    font-weight: bold;
+    font-family: 'Lato' , sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes Home-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+/* Author: Saipravallika Akula */
+
+.Login {
+    text-align: center;
+    background-color: #e8efff;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    height: 100svh;
+}
+
+.Login-logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Login-title {
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 0.75;
+}
+
+.Login-subtitle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    text-align: left;
+    color: #515151;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.Login-ptext {
+    color: #515151;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.Login-signup-text {
+    color: #7281d2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.FormTextBox-outer {
+    width: 70%;
+    max-width: 450px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.FormTextBox-input {
+    margin: 10px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    padding: 5px 10px 5px 40px;
+    font-size: 14px;
+    line-height: 35px;
+    outline: 0;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px 0px rgba(62, 62, 62, 0.25);
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    color: #515151;
+}
+
+.icon {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    font-size: 24px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input:hover {
+    border: 1px solid #515151;
+    box-shadow: 0px 4px 6px 0px #515151;
+}
+
+.Login-button-text {
+    color: white;
+    font-size: 14px;
+    font-weight: 550;
+    line-height: 25px;
+    margin-right: 5px;
+}
+
+.Login-button {
+    border: none;
+    color: white;
+    width: 110px;
+    height: 45px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 165px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    background: #90a0f6;
+    box-shadow: 0px 4px 6px 0px rgba(62, 62, 62, 0.25);
+}
+
+.Login-create-account-text{
+    margin-top: 20px;
+}
+
+/* Author: Khaled Elkhaled */
+
+.ViewAccount{
+  text-align: center;
+  background-color: #e8efff; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 92vh;
+}
+
+.input-container {
+  margin: 10px;
+  padding: 15px;
+  background-color: white; 
+  filter: drop-shadow(0px 4px 6px rgba(62, 62, 62, 0.25));
+  border-radius: 8px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-heading {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.container{
+  margin-bottom: 20px;
+}
+.edit-profile{
+  text-align: center;
+  font-size: large;
+  color: black;
+  margin-bottom: -10px;
+}
+
+.ViewAccount-text{
+    color: #515151;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.edit-button {
+  background-color: #90a0f6; /* Change the background color to blue */
+  color: white; /* Change the text color to white */
+  font-size: 15px; /* Increase the font size */
+  padding: 15px 130px; /* Add padding to make the button larger */
+  border: none; /* Remove the default button border */
+  border-radius: 30px; /* Add rounded corners */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  font-weight: bold;
+  font-family: 'Lato' , sans-serif;
+}
+
+
+
+
+
+
+
+
+/* Author: Adi Kandakurtikar */
+
+.Body {
+    background-color: #E8EFFF;
+    height: 650px
+}
+
+.Profile {
+    width: 300px;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+.Image {
+    height: 100%;
+    width: 50%;
+}
+
+.Form {
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+}
+
+.Text {
+    margin-bottom: 2%;
+}
+
+.ChangeProfile {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.SaveButton {
+    margin: auto;
+    width: 80%;
+    height: 30%;
+    justify-items: center;
+    margin-top: 13%;
+}
+
+.Button {
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    border-color: #afa9d9;
+    border-radius: 25px;
+    background: #90A0F6;
+    box-shadow: 0px 4px 6px 0px rgba(62, 62, 62, 0.25);
+    color: white;
+    outline: none;
+    border-width: 0;
+}
+
+.Button:hover {
+    background: #615b86;
+    cursor: pointer;
+}
+
+.Button:active {
+    background: #818bc8;
+    cursor: pointer;
+}
+
+.ChangeImage {
+    font-size: medium;
+    color: rgb(164, 170, 234);
+}
+
+.ChangeImage:hover {
+    color: rgb(89, 93, 136);
+    cursor: pointer;
+}
+/* Author: Daniel Ng */
+/* InsertLink.css */
+
+.app-container {
+    text-align: center;
+    background-color: #E8EFFF;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.white-box {
+  background-color: #ffffff;
+  width: 70%;
+  max-width: 450px;
+  height: 175px;
+  position: relative; /* Change to relative positioning */
+  margin: 0 auto; /* Center the white box horizontally */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  top: -45px;
+}
+
+.instruction-text {
+    color: #7281D2;
+    font-size: 32px;
+    width: 95%;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.product-preview {
+    color: #000000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+input {
+  padding: 5px 10px 5px 40px;
+  font-size: 14px;
+  line-height: 70px;
+  outline: 0;
+  display: block;
+  width: 90%;
+  box-sizing: border-box;
+  outline: black;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px 0px rgba(62, 62, 62, 0.25);
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  color: #515151;
+}
+
+
+
+.input-container {
+  margin: 10px 0;
+}
+
+.container {
+  text-align: center; /* Center the button text */
+  margin-top: 20px; /* Add space above the button */
+}
+
+.insert-button {
+  background-color: #90a0f6;
+  color: white;
+  font-size: 15px;
+  padding: 10px 30px;
+  width: 320px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Author: Saipravallika Akula */
+
+.SaveSentimentScore {
+    text-align: center;
+    background-color: #E8EFFF;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.Save-title {
+    margin-left: 37px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 0.75;
+}
+
+.rectangle-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.rectangle1 {
+    width: 323px;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 5px;
+    background: #CCD1FD;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle2 {
+    width: 323px;
+    height: 68px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 5px;
+    background: #CCD1FD;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle3 {
+    width: 323px;
+    min-height: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 5px;
+    background: #CCD1FD;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle-text {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.review-text {
+    font-size: 15px;
+    font-weight: 550;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.keywords-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px; /* gap between words */
+}
+
+.keyword-outline {
+    padding: 10px;
+    border: 1.5px solid #90A0F6;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+.Save-button-text {
+    color: white;
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 25px;
+}
+
+.Save-button {
+    border: none;
+    width: 323px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: #7281D2;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.score-text {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.score-text.green {
+    color: #0F7726;
+}
+
+.score-text.orange {
+    color: #FF9F10;
+}
+
+.score-text.red {
+    color: #C51111;
+}
+
+.progress-bar.green {
+    color: #0F7726;
+}
+
+.progress-bar.orange {
+    color: #FF9F10;
+}
+
+.progress-bar.red {
+    color: #C51111;
+}
+
+.progressBar-bg {
+    width: 290px;
+    height: 15px;
+    border-radius: 10px;
+    background: white;
+}
+
+.progress-bar-container {
+    width: 290px;
+    margin-top: -15px;
+}
+
+.progress-bar {
+    height: 15px;
+    border-radius: 10px;
+}
+/* Author: Saipravallika Akula */
+/* LinkVerified.css */
+
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8efff;
+    height: 100vh;
+    position: relative;
+    }
+   
+   
+   .app-container img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 20px; /* Adjust the value to shift the image down */
+   }
+   
+   
+   .instruction-text {
+    font-size: x-large;
+    color: #7281d2;
+    text-align: center;
+    margin-top: 20px; /* Adjust the value to shift the text down */
+   }
+   
+   
+   .container {
+    text-align: center;
+   }
+   
+   
+   .insert-button {
+    background-color: #90a0f6;
+    color: white;
+    font-size: 15px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    }
+   
+   
+   .cancel-button {
+    color: #7281d2;
+    background-color: #e8efff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; /* Adjust the value to provide spacing between the buttons */
+   }
+/* Author: Khaled and Brandon */
+.SentScore{
+    text-align: center;
+    background: #CCD1FD;
+    
+}
+
+.title-text {
+    margin-left: 37px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 0.75;
+}
+
+
+.create-button {
+    background-color: #90a0f6;
+    color: white;
+    font-size: 15px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+
+.product-name {
+font-size: 15px;
+color: black;
+font-family: 'Lato' , sans-serif;
+}
+
+.product-description {
+font-size: 12px;
+color: gray;
+font-family: 'Lato' , sans-serif;
+}
+
+.product-image {
+background-color: black;
+}
+.empty-box {
+    position: relative;
+    width: 350px;
+    height: 80px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.image-button {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    background-color: white;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.empty-box h2 {
+    margin-left: 70px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.empty-box p {
+    margin-left: 70px;
+    
+    color: black;
+}
+
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 30px; /* Adjust button width as needed */
+    height: 30px; /* Adjust button height as needed */
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-size: 30px;
+}
+.delete-button {
+    background-color: #ff6666; /* Adjust button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    margin-right: 10px; /* Adjust margin-right to space the delete button from text */
+}
+/* Author: Daniel Ng */
+.ViewPastScore {
+    text-align: center;
+    background-color: #E8EFFF;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.Save-title {
+    margin-left: 37px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 0.75;
+}
+
+.rectangle-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.rectangle1 {
+    width: 323px;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 5px;
+    background: #CCD1FD;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle2 {
+    width: 323px;
+    height: 68px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 5px;
+    background: #CCD1FD;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle3 {
+    width: 323px;
+    min-height: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 5px;
+    background: #CCD1FD;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle-text {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.review-text {
+    font-size: 15px;
+    font-weight: 550;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.keywords-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px; /* gap between words */
+}
+
+.keyword-outline {
+    padding: 10px;
+    border: 1.5px solid #90A0F6;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+.Save-button-text {
+    color: white;
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 25px;
+}
+
+.Save-button {
+    border: none;
+    width: 323px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: #7281D2;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.score-text {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.score-text.green {
+    color: #0F7726;
+}
+
+.score-text.orange {
+    color: #FF9F10;
+}
+
+.score-text.red {
+    color: #C51111;
+}
+
+.progress-bar.green {
+    color: #0F7726;
+}
+
+.progress-bar.orange {
+    color: #FF9F10;
+}
+
+.progress-bar.red {
+    color: #C51111;
+}
+
+.progressBar-bg {
+    width: 290px;
+    height: 15px;
+    border-radius: 10px;
+    background: white;
+}
+
+.progress-bar-container {
+    width: 290px;
+    margin-top: -15px;
+}
+
+.progress-bar {
+    height: 15px;
+    border-radius: 10px;
+}
+/* Author: Hayden Bell */
+
+.Navbar {
+  text-align: center;
+}
+
+.Navbar-header {
+  background-color: #b9bff4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: full;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.Navbar-logo {
+  flex-basis: 16.666667%;
+  position: relative;
+  width: auto;
+  height: 32px;
+}
+
+.Navbar-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.Navbar-profile {
+  flex-basis: 16.666667%;
+  position: relative;
+  width: auto;
+  height: 32px;
+}
+
