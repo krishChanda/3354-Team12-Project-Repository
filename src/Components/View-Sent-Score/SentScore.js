@@ -27,7 +27,7 @@ function SentScore() {
             <button className="create-button" onClick={() => handleCreateScore()}>Create New Sentiment Score</button>
             <br></br>
             <br></br>
-            <div>
+            <div className="product-box">
                 {productData.map((product) => (
                     <ProductBox 
                         key={product.id} 
